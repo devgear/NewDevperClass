@@ -1,0 +1,612 @@
+object frmCalc: TfrmCalc
+  Left = 0
+  Top = 0
+  Caption = 'frmCalc'
+  ClientHeight = 500
+  ClientWidth = 500
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  ShowHint = True
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ActionMainMenuBar1: TActionMainMenuBar
+    Left = 0
+    Top = 0
+    Width = 500
+    Height = 27
+    UseSystemFont = False
+    ActionManager = ActionManager1
+    Caption = 'MHActionMainMenuBar1'
+    Color = clMenuBar
+    ColorMap.DisabledFontColor = 7171437
+    ColorMap.HighlightColor = clWhite
+    ColorMap.BtnSelectedFont = clBlack
+    ColorMap.UnusedColor = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Spacing = 0
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 481
+    Width = 500
+    Height = 19
+    Panels = <
+      item
+        Width = 250
+      end
+      item
+        Width = 200
+      end>
+  end
+  object MHPanel1: TPanel
+    Left = 8
+    Top = 40
+    Width = 484
+    Height = 435
+    TabOrder = 2
+    object MHEdit2: TEdit
+      Left = 9
+      Top = 8
+      Width = 465
+      Height = 32
+      Alignment = taRightJustify
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
+    object MHEdit1: TEdit
+      Left = 9
+      Top = 53
+      Width = 465
+      Height = 41
+      Alignment = taRightJustify
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnKeyPress = MHEdit1KeyPress
+    end
+    object MHPanel2: TPanel
+      Left = 9
+      Top = 113
+      Width = 465
+      Height = 312
+      TabOrder = 2
+      object MHBt0: TButton
+        Left = 8
+        Top = 234
+        Width = 161
+        Height = 71
+        Hint = 'Zero'
+        Caption = '0'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 0
+        OnClick = MHBt0Click
+      end
+      object MHBt1: TButton
+        Left = 8
+        Top = 158
+        Width = 70
+        Height = 70
+        Hint = 'One'
+        Caption = '1'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 1
+        OnClick = MHBt0Click
+      end
+      object MHBt2: TButton
+        Left = 99
+        Top = 158
+        Width = 70
+        Height = 70
+        Hint = 'Two'
+        Caption = '2'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 2
+        OnClick = MHBt0Click
+      end
+      object MHBt3: TButton
+        Left = 190
+        Top = 158
+        Width = 70
+        Height = 70
+        Hint = 'Three'
+        Caption = '3'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 3
+        OnClick = MHBt0Click
+      end
+      object MHBt4: TButton
+        Left = 8
+        Top = 82
+        Width = 70
+        Height = 70
+        Hint = 'Four'
+        Caption = '4'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 4
+        OnClick = MHBt0Click
+      end
+      object MHBt5: TButton
+        Left = 99
+        Top = 82
+        Width = 70
+        Height = 70
+        Hint = 'Five'
+        Caption = '5'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 5
+        OnClick = MHBt0Click
+      end
+      object MHBt6: TButton
+        Left = 190
+        Top = 82
+        Width = 70
+        Height = 70
+        Hint = 'Six'
+        Caption = '6'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 6
+        OnClick = MHBt0Click
+      end
+      object MHBt7: TButton
+        Left = 8
+        Top = 6
+        Width = 70
+        Height = 70
+        Hint = 'Seven'
+        Caption = '7'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 7
+        OnClick = MHBt0Click
+      end
+      object MHBt8: TButton
+        Left = 99
+        Top = 6
+        Width = 70
+        Height = 70
+        Hint = 'Eight'
+        Caption = '8'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 8
+        OnClick = MHBt0Click
+      end
+      object MHBt9: TButton
+        Left = 190
+        Top = 6
+        Width = 70
+        Height = 70
+        Hint = 'Nine'
+        Caption = '9'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 9
+        OnClick = MHBt0Click
+      end
+      object MHBtdot: TButton
+        Left = 190
+        Top = 234
+        Width = 70
+        Height = 70
+        Hint = 'Point'
+        Caption = '.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 10
+        OnClick = MHBtdotClick
+      end
+      object MHBtde: TButton
+        Left = 368
+        Top = 82
+        Width = 89
+        Height = 70
+        Hint = 'Clear'
+        Caption = 'C'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 11
+        OnClick = MHBtdeClick
+      end
+      object MHBtre: TButton
+        Left = 368
+        Top = 158
+        Width = 89
+        Height = 147
+        Hint = 'Result'
+        Caption = '='
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 12
+        OnClick = MHBtreClick
+      end
+      object MHBtpl: TButton
+        Left = 279
+        Top = 234
+        Width = 70
+        Height = 70
+        Hint = 'Plus'
+        Caption = '+'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 13
+        OnClick = MHBtplClick
+      end
+      object MHBtmi: TButton
+        Left = 279
+        Top = 158
+        Width = 70
+        Height = 70
+        Hint = 'Minus'
+        Caption = '-'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 14
+        OnClick = MHBtmiClick
+      end
+      object MHBtmu: TButton
+        Left = 279
+        Top = 82
+        Width = 70
+        Height = 70
+        Hint = 'Multiplication'
+        Caption = '*'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 15
+        OnClick = MHBtmuClick
+      end
+      object MHBtdi: TButton
+        Left = 279
+        Top = 6
+        Width = 70
+        Height = 70
+        Hint = 'Divide'
+        Caption = '/'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 16
+        OnClick = MHBtdiClick
+      end
+      object MHBtback: TButton
+        Left = 368
+        Top = 6
+        Width = 89
+        Height = 70
+        Hint = 'BackSpace'
+        Caption = '<--'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -20
+        Font.Name = 'HY'#44204#44256#46357
+        Font.Style = []
+        ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
+        TabOrder = 17
+        OnClick = MHBtbackClick
+      end
+    end
+  end
+  object ImageList1: TImageList
+    Left = 144
+    Top = 64
+    Bitmap = {
+      494C0101030008004C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      0000000000003600000028000000400000001000000001002000000000000010
+      0000000000000000000000000000000000008686860086868600868686008686
+      8600868686008686860086868600868686008686860086868600FFFFFF00C0C0
+      C00086868600C0C0C000FFFFFF00C0C0C0000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000008686860086868600868686008686
+      8600868686008686860086868600868686008686860086868600FFFFFF00C0C0
+      C00086868600C0C0C000FFFFFF00C0C0C0000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000008686860086868600868686008686
+      860086868600868686008686860086868600868686008686860086868600FFFF
+      FF0086868600FFFFFF0086868600868686000000000000000000000000000000
+      000000000000FFFFFF00808080000000FF0080808000FFFFFF00000000000000
+      0000000000000000000000000000000000008686860086868600868686008686
+      860086868600868686008686860086868600868686008686860086868600FFFF
+      FF0086868600FFFFFF0086868600868686000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000008000000080000000800000008000
+      00000000000000000000868686008686860086868600FFFFFF00FFFFFF00FFFF
+      FF008000000080000000800000008000000000000000000000000000000000FF
+      FF00FFFFFF0000FFFF000000FF000000FF000000FF0000FFFF00FFFFFF0000FF
+      FF00000000000000000000000000000000008000000080000000800000008000
+      00000000000000000000868686008686860086868600FFFFFF00FFFFFF00FFFF
+      FF00800000008000000080000000800000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      0000FF00000080000000000000000000000086868600FFFFFF00FFFFFF00FFFF
+      FF0080000000000000000000000000000000000000000000000000FFFF00FFFF
+      FF0000FFFF00FFFFFF00808080000000FF0080808000FFFFFF0000FFFF00FFFF
+      FF0000FFFF000000000000000000000000000000000000000000000000008000
+      0000FF00000080000000000000000000000086868600FFFFFF00FFFFFF00FFFF
+      FF00800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      000080000000FF0000008000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00800000000000000000000000000000000000000000FFFF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF0000000000000000000000000000000000000000008000
+      000080000000FF0000008000000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      0000FF00000080000000FF00000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF008000000000000000000000000000000000000000FFFFFF0000FFFF00FFFF
+      FF0000FFFF00FFFFFF0000FFFF000000FF0000FFFF00FFFFFF0000FFFF00FFFF
+      FF0000FFFF00FFFFFF0000000000000000000000000000000000000000008000
+      0000FF00000080000000FF00000000000000FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      000080000000FF0000008000000000000000FFFFFF00FFFF0000FFFFFF00FFFF
+      000080000000000000000000000000000000FFFFFF0000FFFF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF000000FF008080800000FFFF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF00000000000000000000000000000000008000
+      000080000000FF0000008000000000000000FFFFFF00FFFF0000FFFFFF00FFFF
+      0000800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      0000FF00000080000000FF00000000000000FFFF0000FFFFFF00FFFF0000FFFF
+      FF008000000000000000000000000000000000FFFF00FFFFFF0000FFFF00FFFF
+      FF0000FFFF00FFFFFF0000FFFF000000FF000000FF00FFFFFF0000FFFF00FFFF
+      FF0000FFFF00FFFFFF0000FFFF00000000000000000000000000000000008000
+      0000FF00000080000000FF00000000000000FFFF0000FFFFFF00FFFF0000FFFF
+      FF00800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      000080000000FF0000008000000000000000FFFFFF00FFFF0000FFFFFF00FFFF
+      000080000000000000000000000000000000FFFFFF0000FFFF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF0000FFFF000000FF000000FF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF00000000000000000000000000000000008000
+      000080000000FF0000008000000000000000FFFFFF00FFFF0000FFFFFF00FFFF
+      0000800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      0000FF00000080000000FF00000000000000FFFF0000FFFFFF00FFFF0000FFFF
+      FF008000000000000000000000000000000000FFFF00FFFFFF0000FFFF00FFFF
+      FF00808080008080800000FFFF00FFFFFF00808080000000FF000000FF00FFFF
+      FF0000FFFF00FFFFFF0000FFFF00000000000000000000000000000000008000
+      0000FF00000080000000FF00000000000000FFFF0000FFFFFF00FFFF0000FFFF
+      FF00800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000008000
+      0000800000008000000080000000800000008000000080000000800000008000
+      000080000000000000000000000000000000FFFFFF0000FFFF00FFFFFF0000FF
+      FF000000FF000000FF00FFFFFF0000FFFF00808080000000FF000000FF0000FF
+      FF00FFFFFF0000FFFF00FFFFFF00000000000000000000000000000000008000
+      0000800000008000000080000000800000008000000080000000800000008000
+      0000800000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000FFFFFF0000FFFF00FFFF
+      FF000000FF000000FF0080808000FFFFFF00808080000000FF000000FF00FFFF
+      FF0000FFFF00FFFFFF0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000FFFF00FFFFFF0000FF
+      FF00FFFFFF000000FF000000FF000000FF000000FF000000FF00FFFFFF0000FF
+      FF00FFFFFF0000FFFF0000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000800000008000000080000000800000000000000000
+      000000000000000000000000000000000000000000000000000000FFFF00FFFF
+      FF0000FFFF00FFFFFF000000FF000000FF000000FF00FFFFFF0000FFFF00FFFF
+      FF0000FFFF000000000000000000000000000000000000000000000000000000
+      0000000000000000000000800000008000000080000000800000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000000000000000000000FF
+      FF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF0000FF
+      FF00000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000FFFFFF0000FFFF00FFFFFF0000FFFF00FFFFFF00000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000424D3E000000000000003E000000
+      2800000040000000100000000100010000000000800000000000000000000000
+      000000000000000000000000FFFFFF000000FFFF000000000000F83F00000000
+      0000E00F00000000E007C007E0070000E0078003E0070000E0078003E0070000
+      E0070001E0070000E0070001E0070000E0070001E0070000E0070001E0070000
+      E0070001E0070000FFFF8003FFFF0000F81F8003F81F0000F81FC007F81F0000
+      F81FE00FF81F0000FFFFF83FFFFF000000000000000000000000000000000000
+      000000000000}
+  end
+  object ActionManager1: TActionManager
+    ActionBars = <
+      item
+      end
+      item
+      end
+      item
+        Items = <
+          item
+            Items = <
+              item
+                Action = FileExit1
+                ImageIndex = 2
+              end>
+            Caption = '&File'
+          end
+          item
+            Items = <
+              item
+                Action = Action1
+                Caption = '&About'
+                ImageIndex = 1
+              end>
+            Caption = #44592#53440'(&Z)'
+          end>
+        ActionBar = ActionMainMenuBar1
+      end>
+    Images = ImageList1
+    Left = 48
+    Top = 64
+    StyleName = 'Platform Default'
+    object Action1: TAction
+      Category = #44592#53440
+      Caption = 'About'
+      ImageIndex = 1
+      OnExecute = Action1Execute
+    end
+    object FileExit1: TFileExit
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Exit|Quits the application'
+      ImageIndex = 2
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 224
+    Top = 64
+  end
+end
