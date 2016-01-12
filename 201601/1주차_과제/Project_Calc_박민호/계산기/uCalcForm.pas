@@ -69,61 +69,61 @@ implementation
 
 {$R *.dfm}
 
-uses UCalcAbout; // Use Unit : UCalcAbout Unit, USplash Unit ÂüÁ¶
+uses UCalcAbout; // Use Unit : UCalcAbout Unit, USplash Unit ì°¸ì¡°
 
 var
-  Dot, Bol, Btre : Boolean;              // ºÎ¿ïº¯¼ö ¼±¾ğ
-  Result : Real;                         // Equal Button º¯¼ö ¼±¾ğ
-  FourArithmetical : integer;            //  »çÄ¢¿¬»ê º¯¼ö ¼±¾ğ
+  Dot, Bol, Btre : Boolean;              // ë¶€ìš¸ë³€ìˆ˜ ì„ ì–¸
+  Result : Real;                         // Equal Button ë³€ìˆ˜ ì„ ì–¸
+  FourArithmetical : integer;            //  ì‚¬ì¹™ì—°ì‚° ë³€ìˆ˜ ì„ ì–¸
 
 
 procedure TfrmCalc.Action1Execute(Sender: TObject);
 begin
-  AboutCalc.ShowModal;           // UCalAboutFormÀ» ShowModal Ã¢À¸·Î ¶ç¿ó´Ï´Ù.
+  AboutCalc.ShowModal;           // UCalAboutFormì„ ShowModal ì°½ìœ¼ë¡œ ë„ì›ë‹ˆë‹¤.
 end;
 
 
 procedure TfrmCalc.FormShow(Sender: TObject);
 begin
-  Dot := True;                   // FormShow½Ã¿¡ Dotº¯¼ö ºÎ¿ï°ª Ture   (¼Ò¼öÁ¡ Áßº¹ ¹æÁö)
-  Result := 0;                   // FormShow½Ã¿¡ Resultº¯¼ö °ª 0 ÇÒ´ç
-  FourArithmetical := 1;         // FormShow½Ã¿¡ »çÄ¢¿¬»ê °ª 1 ÇÒ´ç
-  Bol := False;                 //  FormShow½Ã¿¡ Bolº¯¼ö ºÎ¿ï°ª False   (+,-,*,/,= ¿¬¼Ó ÀÔ·Â ¹æÁö)
-  Btre := True;                 //  FormShow½Ã¿¡ Btreº¯¼ö ºÎ¿ï°ª True   (= Å¬¸¯ ÈÄ ¼ıÀÚ ÀÔ·Â ¹æÁö)
+  Dot := True;                   // FormShowì‹œì— Dotë³€ìˆ˜ ë¶€ìš¸ê°’ Ture   (ì†Œìˆ˜ì  ì¤‘ë³µ ë°©ì§€)
+  Result := 0;                   // FormShowì‹œì— Resultë³€ìˆ˜ ê°’ 0 í• ë‹¹
+  FourArithmetical := 1;         // FormShowì‹œì— ì‚¬ì¹™ì—°ì‚° ê°’ 1 í• ë‹¹
+  Bol := False;                 //  FormShowì‹œì— Bolë³€ìˆ˜ ë¶€ìš¸ê°’ False   (+,-,*,/,= ì—°ì† ì…ë ¥ ë°©ì§€)
+  Btre := True;                 //  FormShowì‹œì— Btreë³€ìˆ˜ ë¶€ìš¸ê°’ True   (= í´ë¦­ í›„ ìˆ«ì ì…ë ¥ ë°©ì§€)
 end;
 
 procedure TfrmCalc.MHBt0Click(Sender: TObject);
 begin
-  if (Sender is Tbutton) then           // ¼ıÀÚ ¹öÆ° Å¬¸¯½Ã Sender As ¹®¹ı »ç¿ë
-begin
+  if (Sender is Tbutton) then           // ìˆ«ì ë²„íŠ¼ í´ë¦­ì‹œ Sender As ë¬¸ë²• ì‚¬ìš©
+begin // [ê¹€í˜„ìˆ˜]if ë¬¸ì˜ begin end ë“¤ì—¬ì“°ê¸°ê°€ ë§ì§€ ì•ŠìŒ
   if Btre then
 begin
   MHEdit2.Text := MHEdit2.Text+(Sender as TButton).caption;
   MHEdit1.Text := MHEdit1.Text+(Sender as TButton).caption;
-  Bol := True;                          // ¼ıÀÚ ¹öÆ° Å¬¸¯½Ã +,-,*,/,= ±âÈ£ ÀÔ·Â °¡´É)
+  Bol := True;                          // ìˆ«ì ë²„íŠ¼ í´ë¦­ì‹œ +,-,*,/,= ê¸°í˜¸ ì…ë ¥ ê°€ëŠ¥)
 end;
 end;
 end;
 
-procedure TfrmCalc.MHBtbackClick(Sender: TObject);  //  BackSpace Å¬¸¯
+procedure TfrmCalc.MHBtbackClick(Sender: TObject);  //  BackSpace í´ë¦­
 begin
   MHEdit1.Text := LeftStr(MHEdit1.Text, Length(MHEdit1.Text)-1);
-  // LeftStr : ¹®ÀÚ¿­ÀÌ ½ÃÀÛµÈ ÁöÁ¡¿¡¼­ Æ¯Á¤ ÁöÁ¤µÈ ºÎºĞ¸¸ ³ªÅ¸³»¾î È£ÃâÇØÁÖ´Â ÇÔ¼ö
+  // LeftStr : ë¬¸ìì—´ì´ ì‹œì‘ëœ ì§€ì ì—ì„œ íŠ¹ì • ì§€ì •ëœ ë¶€ë¶„ë§Œ ë‚˜íƒ€ë‚´ì–´ í˜¸ì¶œí•´ì£¼ëŠ” í•¨ìˆ˜
 end;
 
 
 procedure TfrmCalc.MHBtdeClick(Sender: TObject);
 begin
-  MHEdit1.Clear;                       // ¿¡µğÆ®1 ¹Ú½º ÃÊ±âÈ­
-  MHEdit1.Text := '';                  // ¿¡µğÆ®1 ¹Ú½º null°ª ÇÒ´ç
-  MHEdit2.Text := '';                  // ¿¡µğÆ®2 ¹Ú½º null°ª ÇÒ´ç
+  MHEdit1.Clear;                       // ì—ë””íŠ¸1 ë°•ìŠ¤ ì´ˆê¸°í™”
+  MHEdit1.Text := '';                  // ì—ë””íŠ¸1 ë°•ìŠ¤ nullê°’ í• ë‹¹
+  MHEdit2.Text := '';                  // ì—ë””íŠ¸2 ë°•ìŠ¤ nullê°’ í• ë‹¹
   Result := 0;
   FourArithmetical := 1;
-  Btre := True;                        //  Clear½Ã ¼ıÀÚÀÔ·Â °¡´É
+  Btre := True;                        //  Clearì‹œ ìˆ«ìì…ë ¥ ê°€ëŠ¥
 end;
 
 
-procedure TfrmCalc.MHBtdiClick(Sender: TObject);  //  ³ª´©±â(/) ¿¬»ê
+procedure TfrmCalc.MHBtdiClick(Sender: TObject);  //  ë‚˜ëˆ„ê¸°(/) ì—°ì‚°
 begin
   if Bol then
   begin
@@ -141,17 +141,17 @@ begin
   end;
 end;
 
-procedure TfrmCalc.MHBtdotClick(Sender: TObject); //  ¼Ò¼öÁ¡ Å¬¸¯
+procedure TfrmCalc.MHBtdotClick(Sender: TObject); //  ì†Œìˆ˜ì  í´ë¦­
 begin
-  if Dot then                                     //  ¼Ò¼öÁ¡À» Å¬¸¯ÇÏ¸é
+  if Dot then                                     //  ì†Œìˆ˜ì ì„ í´ë¦­í•˜ë©´
   begin
-  Dot := False;                                   //  ¼Ò¼öÁ¡ÀÌ ÀÔ·Â ¾ÈµÇ°Ô ÇÏ°í
-  MHEdit2.Text := MHEdit2.Text+'.';               //  ¿¡µğÆ®2 ¹Ú½º¿¡ '¿¡µğÆ®2' °ª°ú '¼Ò¼öÁ¡' °ªÀ» ÇÒ´ç
+  Dot := False;                                   //  ì†Œìˆ˜ì ì´ ì…ë ¥ ì•ˆë˜ê²Œ í•˜ê³ 
+  MHEdit2.Text := MHEdit2.Text+'.';               //  ì—ë””íŠ¸2 ë°•ìŠ¤ì— 'ì—ë””íŠ¸2' ê°’ê³¼ 'ì†Œìˆ˜ì ' ê°’ì„ í• ë‹¹
   end;
 end;
 
 
-procedure TfrmCalc.MHBtmiClick(Sender: TObject);  //  »©±â(-) ¿¬»ê
+procedure TfrmCalc.MHBtmiClick(Sender: TObject);  //  ë¹¼ê¸°(-) ì—°ì‚°
 begin
   if Bol then
   begin
@@ -169,7 +169,7 @@ begin
   end;
 end;
 
-procedure TfrmCalc.MHBtmuClick(Sender: TObject);  //  °öÇÏ±â(X) ¿¬»ê
+procedure TfrmCalc.MHBtmuClick(Sender: TObject);  //  ê³±í•˜ê¸°(X) ì—°ì‚°
 begin
   if Bol then
   begin
@@ -188,7 +188,7 @@ begin
 end;
 
 
-procedure TfrmCalc.MHBtplClick(Sender: TObject);  //  ´õÇÏ±â(+) ¿¬»ê
+procedure TfrmCalc.MHBtplClick(Sender: TObject);  //  ë”í•˜ê¸°(+) ì—°ì‚°
 begin
   if Bol then
   begin
@@ -207,9 +207,9 @@ begin
 end;
 
 
-procedure TfrmCalc.MHBtreClick(Sender: TObject);  //  °á°ú(Result) °ª ¿¬»ê
+procedure TfrmCalc.MHBtreClick(Sender: TObject);  //  ê²°ê³¼(Result) ê°’ ì—°ì‚°
 begin
-  try                                             // ¿¹¿Ü Ã³¸®
+  try                                             // ì˜ˆì™¸ ì²˜ë¦¬
   if Bol then
   begin
   case FourArithmetical of
@@ -226,15 +226,15 @@ begin
   FourArithmetical := 1;
   end;
   except
-  on EzeroDivide do showmessage('0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù.');
-  on EOverFlow do showmessage('ÀÔ·Â ¹üÀ§¸¦ ¹ş¾î³µ½À´Ï´Ù.');
+  on EzeroDivide do showmessage('0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.');
+  on EOverFlow do showmessage('ì…ë ¥ ë²”ìœ„ë¥¼ ë²—ì–´ë‚¬ìŠµë‹ˆë‹¤.');
   end;
 end;
 
 
 procedure TfrmCalc.MHEdit1KeyPress(Sender: TObject; var Key: Char);
 begin
-  if Key=#13 then                      // ¿¡µğÆ®1 ¹Ú½º¿¡ Ä¿¼­¸¦ µÎ°í ¿£ÅÍÅ°¸¦ ´©¸£¸é ¿¬»ê°á°ú°ª Ãâ·Â
+  if Key=#13 then                      // ì—ë””íŠ¸1 ë°•ìŠ¤ì— ì»¤ì„œë¥¼ ë‘ê³  ì—”í„°í‚¤ë¥¼ ëˆ„ë¥´ë©´ ì—°ì‚°ê²°ê³¼ê°’ ì¶œë ¥
      MHBtre.Click;
 end;
 
@@ -242,7 +242,7 @@ end;
 procedure TfrmCalc.Timer1Timer(Sender: TObject);
 begin
   Statusbar1.Panels[1].Text := FormatDateTime('yyyy-mm-dd dddd ampm hh:mm:ss', now);
- // »óÅÂ¹Ù µÎ¹øÂ° ÆĞ³Î¿¡ ÇöÀç ³¯Â¥¿Í ½Ã°£À» ³ª¿À°Ô ÇÕ´Ï´Ù.
+ // ìƒíƒœë°” ë‘ë²ˆì§¸ íŒ¨ë„ì— í˜„ì¬ ë‚ ì§œì™€ ì‹œê°„ì„ ë‚˜ì˜¤ê²Œ í•©ë‹ˆë‹¤.
 end;
 
 end.
