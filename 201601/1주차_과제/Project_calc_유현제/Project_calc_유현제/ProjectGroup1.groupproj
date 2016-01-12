@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5EEB8B82-0806-4DC5-9F42-092A27569875}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project_Calc_dpr.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\메모장 클라이언트서버프로그램\sample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\test.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_Calc_dpr">
+        <MSBuild Projects="Project_Calc_dpr.dproj"/>
+    </Target>
+    <Target Name="Project_Calc_dpr:Clean">
+        <MSBuild Projects="Project_Calc_dpr.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Calc_dpr:Make">
+        <MSBuild Projects="Project_Calc_dpr.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="sample">
+        <MSBuild Projects="..\메모장 클라이언트서버프로그램\sample.dproj"/>
+    </Target>
+    <Target Name="sample:Clean">
+        <MSBuild Projects="..\메모장 클라이언트서버프로그램\sample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="sample:Make">
+        <MSBuild Projects="..\메모장 클라이언트서버프로그램\sample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="test">
+        <MSBuild Projects="..\test.dproj"/>
+    </Target>
+    <Target Name="test:Clean">
+        <MSBuild Projects="..\test.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="test:Make">
+        <MSBuild Projects="..\test.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_Calc_dpr;sample;test"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_Calc_dpr:Clean;sample:Clean;test:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_Calc_dpr:Make;sample:Make;test:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
