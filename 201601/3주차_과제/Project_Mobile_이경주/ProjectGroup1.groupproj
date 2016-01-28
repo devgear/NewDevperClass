@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{89631E4F-0D70-4F2B-9C0D-638D55688662}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BookLogFMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Pserver.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="BookLogFMX">
+        <MSBuild Projects="BookLogFMX.dproj"/>
+    </Target>
+    <Target Name="BookLogFMX:Clean">
+        <MSBuild Projects="BookLogFMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BookLogFMX:Make">
+        <MSBuild Projects="BookLogFMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Pserver">
+        <MSBuild Projects="Pserver.dproj"/>
+    </Target>
+    <Target Name="Pserver:Clean">
+        <MSBuild Projects="Pserver.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pserver:Make">
+        <MSBuild Projects="Pserver.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="BookLogFMX;Pserver"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="BookLogFMX:Clean;Pserver:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="BookLogFMX:Make;Pserver:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,73 @@
+inherited Form1_LgXhdpiPh: TForm1_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited TabControl1: TTabControl
+    Size.Width = 450.000000000000000000
+    Size.Height = 695.000000000000000000
+    inherited TabItem1: TTabItem
+      Size.Width = 150.000000000000000000
+      inherited ToolBar1: TToolBar
+        Size.Width = 450.000000000000000000
+        inherited Label1: TLabel
+          Size.Width = 450.000000000000000000
+        end
+        inherited btnNewItem: TButton
+          Position.X = 402.000000000000000000
+        end
+      end
+      inherited ListView1: TListView
+        Size.Width = 450.000000000000000000
+        Size.Height = 598.000000000000000000
+      end
+    end
+    inherited TabItem2: TTabItem
+      Size.Width = 150.000000000000000000
+      inherited ToolBar2: TToolBar
+        Size.Width = 450.000000000000000000
+        inherited Label2: TLabel
+          Size.Width = 450.000000000000000000
+        end
+        inherited btnDetail: TButton
+          Position.X = 402.000000000000000000
+        end
+      end
+      inherited Layout1: TLayout
+        Size.Width = 450.000000000000000000
+        Size.Height = 598.000000000000000000
+        inherited ListBox1: TListBox
+          Size.Width = 450.000000000000000000
+          Size.Height = 466.000000000000000000
+        end
+        inherited Rectangle1: TRectangle
+          Size.Width = 434.000000000000000000
+          inherited Layout2: TLayout
+            Size.Width = 343.000000000000000000
+            inherited lblTitle: TLabel
+              Size.Width = 332.000000000000000000
+            end
+            inherited lblAuthor: TLabel
+              Size.Width = 328.000000000000000000
+            end
+          end
+        end
+      end
+    end
+    inherited TabItem3: TTabItem
+      Size.Width = 150.000000000000000000
+      inherited ToolBar3: TToolBar
+        Size.Width = 450.000000000000000000
+        inherited Label3: TLabel
+          Size.Width = 450.000000000000000000
+        end
+        inherited btnSaveItem: TButton
+          Position.X = 377.000000000000000000
+        end
+      end
+      inherited vsbEditFocus: TVertScrollBox
+        Size.Width = 450.000000000000000000
+        Size.Height = 598.000000000000000000
+      end
+    end
+  end
+end

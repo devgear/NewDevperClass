@@ -1,0 +1,850 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 530
+  ClientWidth = 380
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 380.000000000000000000
+    Size.Height = 530.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 2
+    TabOrder = 0
+    TabPosition = Bottom
+    object TabItem5: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 75.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #49436#48260' '#51217#49549
+      ExplicitSize.cx = 75.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object Edit1: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 144.000000000000000000
+        Position.Y = 160.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Edit2: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        Position.X = 144.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label4: TLabel
+        Position.X = 72.000000000000000000
+        Position.Y = 160.000000000000000000
+        Size.Width = 81.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'HostName :'
+      end
+      object Label5: TLabel
+        Position.X = 112.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 41.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Port :'
+      end
+      object Button3: TButton
+        Position.X = 160.000000000000000000
+        Position.Y = 240.000000000000000000
+        TabOrder = 4
+        Text = #51217#49549
+        OnClick = Button3Click
+      end
+    end
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 75.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #46020#49436' '#47785#47197
+      ExplicitSize.cx = 127.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar1: TToolBar
+        Size.Width = 50.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label1: TLabel
+          Align = Contents
+          Size.Width = 50.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = #45208#51032' '#46020#49436#44288'(0)'
+        end
+        object btnNewItem: TButton
+          Align = Right
+          Position.X = 2.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'additembutton'
+          TabOrder = 1
+          Text = 'btnNewItem'
+          OnClick = btnNewItemClick
+        end
+        object Button1: TButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'refreshtoolbutton'
+          TabOrder = 3
+          Text = 'Button1'
+          OnClick = Button1Click
+        end
+      end
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+        ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        ItemIndex = 0
+        ScrollViewPos = 86.000000000000000000
+        Align = Client
+        Size.Width = 50.000000000000000000
+        Size.Height = 2.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearance.ItemHeight = 88
+        ItemAppearanceObjects.ItemObjects.Text.WordWrap = True
+        ItemAppearanceObjects.ItemObjects.Image.Width = 60.000000000000000000
+        ItemAppearanceObjects.ItemObjects.Image.Height = 80.000000000000000000
+        OnItemClick = ListView1ItemClick
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 75.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #46020#49436' '#49345#49464#48372#44592
+      ExplicitSize.cx = 127.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar2: TToolBar
+        Size.Width = 380.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label2: TLabel
+          Align = Contents
+          Size.Width = 380.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          TextSettings.WordWrap = False
+          Text = '111312313'
+        end
+        object btnBackList: TButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+          TabOrder = 1
+          Text = 'btnBackList'
+          OnClick = btnBackListClick
+        end
+        object btnDetail: TButton
+          Align = Right
+          Position.X = 332.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'detailstoolbutton'
+          TabOrder = 2
+          Text = 'btnDetail'
+          OnClick = btnDetailClick
+        end
+      end
+      object Layout1: TLayout
+        Align = Client
+        Size.Width = 380.000000000000000000
+        Size.Height = 433.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object ListBox1: TListBox
+          Align = Client
+          Size.Width = 380.000000000000000000
+          Size.Height = 301.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 376.000000000000000000
+          Viewport.Height = 297.000000000000000000
+          object ListBoxItem1: TListBoxItem
+            Size.Width = 376.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxitemnodetail'
+            TabOrder = 0
+            Text = #52636#54032#49324
+            object lblPublisher: TLabel
+              Align = Client
+              Margins.Left = 80.000000000000000000
+              Size.Width = 296.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              Text = '123123'
+            end
+          end
+          object ListBoxItem2: TListBoxItem
+            Position.Y = 44.000000000000000000
+            Size.Width = 376.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxitemnodetail'
+            TabOrder = 1
+            Text = #50672#46973#52376
+            object lblPhone: TLabel
+              Align = Client
+              Margins.Left = 80.000000000000000000
+              Size.Width = 296.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              Text = '12313'
+              OnClick = lblPhoneClick
+            end
+          end
+          object ListBoxItem3: TListBoxItem
+            Position.Y = 88.000000000000000000
+            Size.Width = 376.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxitemnodetail'
+            TabOrder = 2
+            Text = #49324#51060#53944
+            object lblWebSite: TLabel
+              Align = Client
+              Margins.Left = 80.000000000000000000
+              Size.Width = 224.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'www.naver.com'
+              OnClick = lblWebSiteClick
+            end
+            object Button2: TButton
+              Align = MostRight
+              Position.X = 304.000000000000000000
+              Size.Width = 72.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = #51060#46041
+              OnClick = Button2Click
+            end
+          end
+          object ListBoxItem4: TListBoxItem
+            Position.Y = 132.000000000000000000
+            Size.Width = 376.000000000000000000
+            Size.Height = 150.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxitemnodetail'
+            TabOrder = 3
+            Text = #44048#49345#54217
+            object lblComment: TLabel
+              Align = Client
+              Margins.Left = 80.000000000000000000
+              Size.Width = 296.000000000000000000
+              Size.Height = 150.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'sadkasd'
+            end
+          end
+        end
+        object Rectangle1: TRectangle
+          Align = Top
+          Margins.Left = 8.000000000000000000
+          Margins.Top = 8.000000000000000000
+          Margins.Right = 8.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 364.000000000000000000
+          Size.Height = 116.000000000000000000
+          Size.PlatformDefault = False
+          object Image1: TImage
+            MultiResBitmap = <
+              item
+                Width = 75
+                Height = 75
+                PNG = {
+                  89504E470D0A1A0A0000000D494844520000004B0000004B0806000000384E7A
+                  EA000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                  002D49444154785EEDC13101000000C2A0F54F6D0C1F20000000000000000000
+                  000000000000000000000000E0AB06582F00015BA527D20000000049454E44AE
+                  426082}
+              end>
+            Align = Left
+            Margins.Left = 8.000000000000000000
+            Margins.Top = 8.000000000000000000
+            Margins.Right = 8.000000000000000000
+            Margins.Bottom = 8.000000000000000000
+            Position.X = 8.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 75.000000000000000000
+            Size.Height = 100.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object ShadowEffect1: TShadowEffect
+            Distance = 2.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.300000011920929000
+            Opacity = 0.600000023841857900
+            ShadowColor = claGray
+          end
+          object Layout2: TLayout
+            Align = Client
+            Size.Width = 273.000000000000000000
+            Size.Height = 116.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object lblTitle: TLabel
+              Align = MostTop
+              AutoSize = True
+              StyledSettings = [Family, FontColor]
+              Margins.Left = 8.000000000000000000
+              Margins.Top = 16.000000000000000000
+              Margins.Right = 3.000000000000000000
+              Position.X = 8.000000000000000000
+              Position.Y = 16.000000000000000000
+              Size.Width = 262.000000000000000000
+              Size.Height = 22.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              TextSettings.Font.Style = [fsBold]
+              TextSettings.WordWrap = False
+              Text = '111312313'
+            end
+            object lblAuthor: TLabel
+              Align = Top
+              Margins.Left = 12.000000000000000000
+              Margins.Top = 10.000000000000000000
+              Margins.Right = 3.000000000000000000
+              Margins.Bottom = 3.000000000000000000
+              Position.X = 12.000000000000000000
+              Position.Y = 48.000000000000000000
+              Size.Width = 258.000000000000000000
+              Size.Height = 33.000000000000000000
+              Size.PlatformDefault = False
+              Text = '1231'
+            end
+          end
+        end
+      end
+      object OverflowMenu: TListBox
+        Position.X = 290.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 88.000000000000000000
+        Size.Height = 96.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 68.000000000000000000
+        Viewport.Height = 92.000000000000000000
+        object lstItemModify: TListBoxItem
+          TextSettings.HorzAlign = Center
+          StyledSettings = [Family, Size, Style, FontColor]
+          Size.Width = 68.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxitemstyle'
+          TabOrder = 0
+          Text = #49688#51221
+          OnClick = lstItemModifyClick
+        end
+        object lstItemDelete: TListBoxItem
+          TextSettings.HorzAlign = Center
+          StyledSettings = [Family, Size, Style, FontColor]
+          Position.Y = 48.000000000000000000
+          Size.Width = 68.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxitemstyle'
+          TabOrder = 1
+          Text = #49325#51228
+          OnClick = lstItemDeleteClick
+        end
+        object ShadowEffect2: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+      end
+    end
+    object TabItem3: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 75.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #49352#47196#50868' '#46020#49436' '#52628#44032
+      ExplicitSize.cx = 126.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar3: TToolBar
+        Size.Width = 50.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Label3: TLabel
+          Align = Contents
+          Size.Width = 50.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'toollabel'
+          TextSettings.HorzAlign = Center
+          Text = #46020#49436' '#52628#44032
+        end
+        object btnCancel: TButton
+          Align = Left
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'backtoolbutton'
+          TabOrder = 2
+          Text = #52712#49548
+          OnClick = btnCancelClick
+        end
+        object btnSaveItem: TButton
+          Align = Right
+          Position.X = 2.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'donetoolbutton'
+          TabOrder = 3
+          Text = #51200#51109
+          OnClick = btnSaveItemClick
+        end
+      end
+      object vsbEditFocus: TVertScrollBox
+        Align = Client
+        Size.Width = 50.000000000000000000
+        Size.Height = 2.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 50.000000000000000000
+        Viewport.Height = 2.000000000000000000
+        object lytContentsNew: TLayout
+          Align = Client
+          Size.Width = 50.000000000000000000
+          Size.Height = 2.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Layout4: TLayout
+            Align = Top
+            Size.Width = 50.000000000000000000
+            Size.Height = 113.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Rectangle2: TRectangle
+              Align = Center
+              Fill.Kind = None
+              Size.Width = 100.000000000000000000
+              Size.Height = 100.000000000000000000
+              Size.PlatformDefault = False
+              object imgNewItem: TImage
+                MultiResBitmap = <
+                  item
+                    Width = 75
+                    Height = 75
+                    PNG = {
+                      89504E470D0A1A0A0000000D494844520000004B0000004B0806000000384E7A
+                      EA000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                      002D49444154785EEDC13101000000C2A0F54F6D0C1F20000000000000000000
+                      000000000000000000000000E0AB06582F00015BA527D20000000049454E44AE
+                      426082}
+                  end>
+                Align = Client
+                Margins.Left = 2.000000000000000000
+                Margins.Top = 2.000000000000000000
+                Margins.Right = 2.000000000000000000
+                Margins.Bottom = 2.000000000000000000
+                Size.Width = 96.000000000000000000
+                Size.Height = 96.000000000000000000
+                Size.PlatformDefault = False
+                OnClick = imgNewItemClick
+              end
+            end
+          end
+          object ListBox2: TListBox
+            Align = Client
+            Size.Width = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            DisableFocusEffect = True
+            DefaultItemStyles.ItemStyle = ''
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            Viewport.Width = 30.000000000000000000
+            Viewport.Height = 0.000000000000000000
+            object ListBoxItem7: TListBoxItem
+              Size.Width = 30.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxitemnodetail'
+              TabOrder = 0
+              Text = #51228#47785
+              object edtTitle: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Text = '111312313'
+                Margins.Left = 80.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 7.000000000000000000
+                Size.Width = -55.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+            object ListBoxItem8: TListBoxItem
+              Position.Y = 44.000000000000000000
+              Size.Width = 30.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxitemnodetail'
+              TabOrder = 1
+              Text = #51200#51088
+              object edtAuthor: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Text = '1231'
+                Margins.Left = 80.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 7.000000000000000000
+                Size.Width = -55.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+            object ListBoxitem9: TListBoxItem
+              Position.Y = 88.000000000000000000
+              Size.Width = 30.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxitemnodetail'
+              TabOrder = 2
+              Text = #52636#54032#49324
+              object edtPublisher: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Text = '123123'
+                Margins.Left = 80.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 7.000000000000000000
+                Size.Width = -55.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+            object ListBoxItem10: TListBoxItem
+              Position.Y = 132.000000000000000000
+              Size.Width = 30.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxitemnodetail'
+              TabOrder = 3
+              Text = #50672#46973#52376
+              object edtPhone: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Text = '12313'
+                Margins.Left = 80.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 7.000000000000000000
+                Size.Width = -55.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+            object ListBoxItem11: TListBoxItem
+              Position.Y = 176.000000000000000000
+              Size.Width = 30.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxitemnodetail'
+              TabOrder = 4
+              Text = #49324#51060#53944
+              object edtWebSite: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 1
+                Text = 'www.naver.com'
+                Margins.Left = 80.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 7.000000000000000000
+                Size.Width = -55.000000000000000000
+                Size.Height = 30.000000000000000000
+                Size.PlatformDefault = False
+              end
+            end
+            object ListBoxItem12: TListBoxItem
+              Position.Y = 220.000000000000000000
+              Size.Width = 30.000000000000000000
+              Size.Height = 96.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxitemnodetail'
+              TabOrder = 5
+              Text = #44048#49345#54217
+              object mmoComment: TMemo
+                Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+                DataDetectorTypes = []
+                Lines.Strings = (
+                  'sadkasd')
+                TextSettings.WordWrap = True
+                Align = Client
+                Margins.Left = 80.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Margins.Bottom = 7.000000000000000000
+                Size.Width = -55.000000000000000000
+                Size.Height = 82.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                Viewport.Width = 46.000000000000000000
+                Viewport.Height = 46.000000000000000000
+              end
+            end
+          end
+        end
+      end
+    end
+    object TabItem4: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 78.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #50937#54168#51060#51648
+      ExplicitSize.cx = 95.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object WebBrowser1: TWebBrowser
+        Align = Client
+        Size.Width = 380.000000000000000000
+        Size.Height = 441.000000000000000000
+        Size.PlatformDefault = False
+        URL = 'http://www.naver.com'
+      end
+      object ToolBar4: TToolBar
+        Size.Width = 380.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object SpeedButton1: TSpeedButton
+          Align = MostLeft
+          Size.Width = 57.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+          Text = 'Action1'
+          OnClick = SpeedButton1Click
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 304
+    Top = 400
+    object ChangeTabAction1: TChangeTabAction
+      Category = 'Tab'
+    end
+    object Action1: TAction
+      Text = 'Action1'
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = dmDataAccess.book_Qry
+    ScopeMappings = <>
+    Left = 232
+    Top = 400
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 148
+    Top = 405
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_AUTHOR'
+      Control = edtAuthor
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_PUBLISHER'
+      Control = edtPublisher
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_TITLE'
+      Control = edtTitle
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_PHONE'
+      Control = edtPhone
+      Track = False
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_WEBSITE'
+      Control = edtWebSite
+      Track = False
+    end
+    object LinkControlToField6: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_COMMENT'
+      Control = mmoComment
+      Track = False
+    end
+    object LinkPropertyToFieldBitmap: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_IMAGE'
+      Component = imgNewItem
+      ComponentProperty = 'Bitmap'
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_AUTHOR'
+      Component = lblAuthor
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText3: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_WEBSITE'
+      Component = lblWebSite
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText4: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_TITLE'
+      Component = lblTitle
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText5: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_PUBLISHER'
+      Component = lblPublisher
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText6: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_COMMENT'
+      Component = lblComment
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_PHONE'
+      Component = lblPhone
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldBitmap2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_IMAGE'
+      Component = Image1
+      ComponentProperty = 'Bitmap'
+    end
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_TITLE'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'BOOK_AUTHOR'
+          ControlMemberName = 'Detail'
+        end
+        item
+          SourceMemberName = 'BOOK_THUMB'
+          ControlMemberName = 'Bitmap'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkPropertyToFieldText7: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'BOOK_TITLE'
+      Component = Label2
+      ComponentProperty = 'Text'
+    end
+  end
+end

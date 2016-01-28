@@ -1,0 +1,12 @@
+﻿[]
+Coordinates=10,71,119,33
+
+[SQLConnection1]
+Coordinates=119,1,97,33
+
+[DSProviderConnection1]
+Coordinates=235,1,132,33
+
+[ClientDataSet1]
+Coordinates=0,0,100,213
+
