@@ -1,0 +1,100 @@
+inherited Form3_LgXhdpiPh: TForm3_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited Layout5: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 640.000000000000000000
+    inherited TabControl1: TTabControl
+      Size.Width = 450.000000000000000000
+      Size.Height = 640.000000000000000000
+      inherited TabItem_main: TTabItem
+        Size.Width = 43.000000000000000000
+        ExplicitSize.cx = 78.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited Layout7: TLayout
+          Size.Width = 450.000000000000000000
+          inherited Image2: TImage
+            MultiResBitmap.Height = 377
+            MultiResBitmap.Width = 638
+          end
+        end
+        inherited Layout9: TLayout
+          Size.Width = 450.000000000000000000
+          Size.Height = 294.000000000000000000
+        end
+      end
+      inherited TabItem_location: TTabItem
+        Size.Width = 43.000000000000000000
+        ExplicitSize.cx = 57.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited Layout1: TLayout
+          Size.Width = 446.000000000000000000
+          Size.Height = 587.000000000000000000
+          inherited WebBrowser1: TWebBrowser
+            Size.Width = 406.000000000000000000
+            inherited ListBox1: TListBox
+              Position.X = -8.000000000000000000
+              Viewport.Width = 297.000000000000000000
+              Viewport.Height = 129.000000000000000000
+            end
+          end
+        end
+      end
+      inherited TabItem_repair_list: TTabItem
+        Size.Width = 67.000000000000000000
+        ExplicitSize.cx = 130.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited StringGrid1: TStringGrid
+          Viewport.Width = 309.000000000000000000
+          Viewport.Height = 160.000000000000000000
+        end
+        inherited Button3: TButton
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+        end
+        inherited StringGrid2: TStringGrid
+          Viewport.Width = 309.000000000000000000
+          Viewport.Height = 120.000000000000000000
+        end
+        inherited Label7: TLabel
+          Position.Y = 16.000000000000000000
+        end
+      end
+      inherited TabItem_repair_now: TTabItem
+        Size.Width = 67.000000000000000000
+        ExplicitSize.cx = 193.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited TabItem_repair_reserve: TTabItem
+        Size.Width = 67.000000000000000000
+        ExplicitSize.cx = 193.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited ComboBox1: TComboBox
+          TabOrder = 8
+        end
+      end
+      inherited TabItem_login: TTabItem
+        Enabled = False
+        Size.Width = 55.000000000000000000
+        ExplicitSize.cx = 66.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited TabItem_regi: TTabItem
+        Size.Width = 67.000000000000000000
+        ExplicitSize.cx = 58.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+    end
+  end
+  inherited ToolBar1: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited Button4: TButton
+      Visible = False
+      inherited Image1: TImage
+        MultiResBitmap.Height = 76
+        MultiResBitmap.Width = 79
+      end
+    end
+  end
+end

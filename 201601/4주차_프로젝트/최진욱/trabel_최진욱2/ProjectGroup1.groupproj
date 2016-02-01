@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{ECFE0E87-53E5-459D-BEE2-92AD3B98C86C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Server\Travel_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="mo\travel_Mobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Vcl\travel_Vcl.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Travel_Server">
+        <MSBuild Projects="Server\Travel_Server.dproj"/>
+    </Target>
+    <Target Name="Travel_Server:Clean">
+        <MSBuild Projects="Server\Travel_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Travel_Server:Make">
+        <MSBuild Projects="Server\Travel_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="travel_Mobile">
+        <MSBuild Projects="mo\travel_Mobile.dproj"/>
+    </Target>
+    <Target Name="travel_Mobile:Clean">
+        <MSBuild Projects="mo\travel_Mobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="travel_Mobile:Make">
+        <MSBuild Projects="mo\travel_Mobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="travel_Vcl">
+        <MSBuild Projects="Vcl\travel_Vcl.dproj"/>
+    </Target>
+    <Target Name="travel_Vcl:Clean">
+        <MSBuild Projects="Vcl\travel_Vcl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="travel_Vcl:Make">
+        <MSBuild Projects="Vcl\travel_Vcl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Travel_Server;travel_Mobile;travel_Vcl"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Travel_Server:Clean;travel_Mobile:Clean;travel_Vcl:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Travel_Server:Make;travel_Mobile:Make;travel_Vcl:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

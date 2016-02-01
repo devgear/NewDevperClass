@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6F9D1B97-7FA7-4479-9107-656294333661}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Flower_Server_Project.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Flower_Client_Manager_Project.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Flower_Client_Mobile_Project.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Flower_Server_Project">
+        <MSBuild Projects="Flower_Server_Project.dproj"/>
+    </Target>
+    <Target Name="Flower_Server_Project:Clean">
+        <MSBuild Projects="Flower_Server_Project.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Flower_Server_Project:Make">
+        <MSBuild Projects="Flower_Server_Project.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Flower_Client_Manager_Project">
+        <MSBuild Projects="Flower_Client_Manager_Project.dproj"/>
+    </Target>
+    <Target Name="Flower_Client_Manager_Project:Clean">
+        <MSBuild Projects="Flower_Client_Manager_Project.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Flower_Client_Manager_Project:Make">
+        <MSBuild Projects="Flower_Client_Manager_Project.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Flower_Client_Mobile_Project">
+        <MSBuild Projects="Flower_Client_Mobile_Project.dproj"/>
+    </Target>
+    <Target Name="Flower_Client_Mobile_Project:Clean">
+        <MSBuild Projects="Flower_Client_Mobile_Project.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Flower_Client_Mobile_Project:Make">
+        <MSBuild Projects="Flower_Client_Mobile_Project.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Flower_Server_Project;Flower_Client_Manager_Project;Flower_Client_Mobile_Project"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Flower_Server_Project:Clean;Flower_Client_Manager_Project:Clean;Flower_Client_Mobile_Project:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Flower_Server_Project:Make;Flower_Client_Manager_Project:Make;Flower_Client_Mobile_Project:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

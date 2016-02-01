@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{380F73FA-75C0-4F2D-9423-126DA71AD331}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="childschool_Server\Project_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="childschool_Client\Project_School.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Childschool_Beacon\Project_Beacon.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Childschool_Mom\Project_Mom.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_Server">
+        <MSBuild Projects="childschool_Server\Project_Server.dproj"/>
+    </Target>
+    <Target Name="Project_Server:Clean">
+        <MSBuild Projects="childschool_Server\Project_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Server:Make">
+        <MSBuild Projects="childschool_Server\Project_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_School">
+        <MSBuild Projects="childschool_Client\Project_School.dproj"/>
+    </Target>
+    <Target Name="Project_School:Clean">
+        <MSBuild Projects="childschool_Client\Project_School.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_School:Make">
+        <MSBuild Projects="childschool_Client\Project_School.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Beacon">
+        <MSBuild Projects="Childschool_Beacon\Project_Beacon.dproj"/>
+    </Target>
+    <Target Name="Project_Beacon:Clean">
+        <MSBuild Projects="Childschool_Beacon\Project_Beacon.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Beacon:Make">
+        <MSBuild Projects="Childschool_Beacon\Project_Beacon.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Mom">
+        <MSBuild Projects="Childschool_Mom\Project_Mom.dproj"/>
+    </Target>
+    <Target Name="Project_Mom:Clean">
+        <MSBuild Projects="Childschool_Mom\Project_Mom.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Mom:Make">
+        <MSBuild Projects="Childschool_Mom\Project_Mom.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_Server;Project_School;Project_Beacon;Project_Mom"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_Server:Clean;Project_School:Clean;Project_Beacon:Clean;Project_Mom:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_Server:Make;Project_School:Make;Project_Beacon:Make;Project_Mom:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

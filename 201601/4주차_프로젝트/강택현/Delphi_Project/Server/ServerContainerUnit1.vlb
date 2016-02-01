@@ -1,0 +1,12 @@
+﻿[DSServer1]
+Coordinates=144,1,66,33
+
+[DSServerClass1]
+Coordinates=144,53,93,33
+
+[DSTCPServerTransport1]
+Coordinates=144,105,135,33
+
+[ServerMethods1.]
+Coordinates=10,10,125,123
+

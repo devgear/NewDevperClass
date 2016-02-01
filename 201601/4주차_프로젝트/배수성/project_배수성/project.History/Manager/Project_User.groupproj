@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8D848183-5B02-4987-A9D4-7E474195EAAF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project_History_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Project_History_Client.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_History_Server">
+        <MSBuild Projects="Project_History_Server.dproj"/>
+    </Target>
+    <Target Name="Project_History_Server:Clean">
+        <MSBuild Projects="Project_History_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_History_Server:Make">
+        <MSBuild Projects="Project_History_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_History_Client">
+        <MSBuild Projects="Project_History_Client.dproj"/>
+    </Target>
+    <Target Name="Project_History_Client:Clean">
+        <MSBuild Projects="Project_History_Client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_History_Client:Make">
+        <MSBuild Projects="Project_History_Client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_History_Server;Project_History_Client"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_History_Server:Clean;Project_History_Client:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_History_Server:Make;Project_History_Client:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

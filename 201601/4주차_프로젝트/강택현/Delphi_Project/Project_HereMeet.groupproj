@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D1C6E310-3B62-48AE-A92E-34310B195051}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Win\Win_HereMeet.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Server\Server_HereMeet.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Mobile\Mo_HereMeet.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Win_HereMeet">
+        <MSBuild Projects="Win\Win_HereMeet.dproj"/>
+    </Target>
+    <Target Name="Win_HereMeet:Clean">
+        <MSBuild Projects="Win\Win_HereMeet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Win_HereMeet:Make">
+        <MSBuild Projects="Win\Win_HereMeet.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Server_HereMeet">
+        <MSBuild Projects="Server\Server_HereMeet.dproj"/>
+    </Target>
+    <Target Name="Server_HereMeet:Clean">
+        <MSBuild Projects="Server\Server_HereMeet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Server_HereMeet:Make">
+        <MSBuild Projects="Server\Server_HereMeet.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Mo_HereMeet">
+        <MSBuild Projects="Mobile\Mo_HereMeet.dproj"/>
+    </Target>
+    <Target Name="Mo_HereMeet:Clean">
+        <MSBuild Projects="Mobile\Mo_HereMeet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Mo_HereMeet:Make">
+        <MSBuild Projects="Mobile\Mo_HereMeet.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Win_HereMeet;Server_HereMeet;Mo_HereMeet"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Win_HereMeet:Clean;Server_HereMeet:Clean;Mo_HereMeet:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Win_HereMeet:Make;Server_HereMeet:Make;Mo_HereMeet:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

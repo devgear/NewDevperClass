@@ -1,0 +1,13 @@
+﻿[DBGrid1]
+Coordinates=147,10,56,33
+Visible=True
+
+[Btn_Rclose]
+Coordinates=10,10,70,51
+
+[Panel1]
+Coordinates=90,10,47,51
+
+[]
+Coordinates=155,1,82,33
+

@@ -1,0 +1,47 @@
+inherited Form3_LgXhdpiPh: TForm3_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited ToolBar2: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited Label4: TLabel
+      Size.Width = 396.000000000000000000
+    end
+    inherited swActiveSensor: TSwitch
+      Position.X = 406.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Height = 26.000000000000000000
+    end
+  end
+  inherited WebBrowser1: TWebBrowser
+    Size.Width = 450.000000000000000000
+    Position.Y = 464.000000000000000000
+  end
+  inherited btnFind_Loc: TButton
+    Size.Height = 44.000000000000000000
+  end
+  inherited edt_Id: TEdit
+    Size.Height = 0.000000000000000000
+  end
+  inherited edt_Lat: TEdit
+    Size.Height = 0.000000000000000000
+  end
+  inherited edt_Lng: TEdit
+    Size.Height = 0.000000000000000000
+  end
+  inherited edt_Name: TEdit
+    Size.Height = 0.000000000000000000
+  end
+  inherited Label1: TLabel
+    Size.Height = 23.000000000000000000
+  end
+  inherited Label2: TLabel
+    Size.Height = 23.000000000000000000
+  end
+  inherited Label3: TLabel
+    Size.Height = 23.000000000000000000
+  end
+  inherited Label6: TLabel
+    Size.Height = 23.000000000000000000
+  end
+end

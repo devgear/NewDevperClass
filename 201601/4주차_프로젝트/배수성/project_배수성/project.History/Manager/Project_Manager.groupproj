@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2F5EBC54-40A0-477B-A931-DCF321EE1606}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Project_History_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Project_Manager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\User\Project_User.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Project_History_Server">
+        <MSBuild Projects="Project_History_Server.dproj"/>
+    </Target>
+    <Target Name="Project_History_Server:Clean">
+        <MSBuild Projects="Project_History_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_History_Server:Make">
+        <MSBuild Projects="Project_History_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Manager">
+        <MSBuild Projects="Project_Manager.dproj"/>
+    </Target>
+    <Target Name="Project_Manager:Clean">
+        <MSBuild Projects="Project_Manager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Manager:Make">
+        <MSBuild Projects="Project_Manager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_User">
+        <MSBuild Projects="..\User\Project_User.dproj"/>
+    </Target>
+    <Target Name="Project_User:Clean">
+        <MSBuild Projects="..\User\Project_User.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_User:Make">
+        <MSBuild Projects="..\User\Project_User.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Project_History_Server;Project_Manager;Project_User"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Project_History_Server:Clean;Project_Manager:Clean;Project_User:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Project_History_Server:Make;Project_Manager:Make;Project_User:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

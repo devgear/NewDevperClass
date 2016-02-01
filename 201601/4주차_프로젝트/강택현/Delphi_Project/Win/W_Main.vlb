@@ -1,0 +1,13 @@
+﻿[btn_HereMeet]
+Coordinates=201,10,82,51
+
+[WebBrowser1]
+Coordinates=113,232,83,33
+
+[Panel1]
+Coordinates=136,10,47,51
+
+[]
+Coordinates=10,232,81,33
+Visible=True
+

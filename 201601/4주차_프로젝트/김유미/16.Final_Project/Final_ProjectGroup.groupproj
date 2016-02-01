@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{27A7DE63-EAAA-4EFE-9718-B68E75DC283A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FinalServer_Project.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FinalWindow_Project.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FinalMobile_Project.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FinalServer_Project">
+        <MSBuild Projects="FinalServer_Project.dproj"/>
+    </Target>
+    <Target Name="FinalServer_Project:Clean">
+        <MSBuild Projects="FinalServer_Project.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FinalServer_Project:Make">
+        <MSBuild Projects="FinalServer_Project.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FinalWindow_Project">
+        <MSBuild Projects="FinalWindow_Project.dproj"/>
+    </Target>
+    <Target Name="FinalWindow_Project:Clean">
+        <MSBuild Projects="FinalWindow_Project.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FinalWindow_Project:Make">
+        <MSBuild Projects="FinalWindow_Project.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FinalMobile_Project">
+        <MSBuild Projects="FinalMobile_Project.dproj"/>
+    </Target>
+    <Target Name="FinalMobile_Project:Clean">
+        <MSBuild Projects="FinalMobile_Project.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FinalMobile_Project:Make">
+        <MSBuild Projects="FinalMobile_Project.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FinalServer_Project;FinalWindow_Project;FinalMobile_Project"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FinalServer_Project:Clean;FinalWindow_Project:Clean;FinalMobile_Project:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FinalServer_Project:Make;FinalWindow_Project:Make;FinalMobile_Project:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,13 @@
+﻿[Sights_Grid]
+Coordinates=10,78,72,33
+Visible=True
+
+[Panel1]
+Coordinates=99,10,47,51
+
+[Btn_Sclose]
+Coordinates=10,10,70,51
+
+[]
+Coordinates=171,56,91,36
+

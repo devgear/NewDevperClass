@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EBDE1681-C3A0-4A2B-BDC9-E07EA1A3B4E8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="bike_mobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="bike_server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Pvcl.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="bike_mobile">
+        <MSBuild Projects="bike_mobile.dproj"/>
+    </Target>
+    <Target Name="bike_mobile:Clean">
+        <MSBuild Projects="bike_mobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="bike_mobile:Make">
+        <MSBuild Projects="bike_mobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="bike_server">
+        <MSBuild Projects="bike_server.dproj"/>
+    </Target>
+    <Target Name="bike_server:Clean">
+        <MSBuild Projects="bike_server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="bike_server:Make">
+        <MSBuild Projects="bike_server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Pvcl">
+        <MSBuild Projects="Pvcl.dproj"/>
+    </Target>
+    <Target Name="Pvcl:Clean">
+        <MSBuild Projects="Pvcl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Pvcl:Make">
+        <MSBuild Projects="Pvcl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="bike_mobile;bike_server;Pvcl"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="bike_mobile:Clean;bike_server:Clean;Pvcl:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="bike_mobile:Make;bike_server:Make;Pvcl:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C4EBEE8B-0C8F-48B0-B533-BC05277F2EC7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="mobile\PMobile_Client.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="server\PServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="vcl\PVCL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PMobile_Client">
+        <MSBuild Projects="mobile\PMobile_Client.dproj"/>
+    </Target>
+    <Target Name="PMobile_Client:Clean">
+        <MSBuild Projects="mobile\PMobile_Client.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PMobile_Client:Make">
+        <MSBuild Projects="mobile\PMobile_Client.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PServer">
+        <MSBuild Projects="server\PServer.dproj"/>
+    </Target>
+    <Target Name="PServer:Clean">
+        <MSBuild Projects="server\PServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PServer:Make">
+        <MSBuild Projects="server\PServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PVCL">
+        <MSBuild Projects="vcl\PVCL.dproj"/>
+    </Target>
+    <Target Name="PVCL:Clean">
+        <MSBuild Projects="vcl\PVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PVCL:Make">
+        <MSBuild Projects="vcl\PVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PMobile_Client;PServer;PVCL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PMobile_Client:Clean;PServer:Clean;PVCL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PMobile_Client:Make;PServer:Make;PVCL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

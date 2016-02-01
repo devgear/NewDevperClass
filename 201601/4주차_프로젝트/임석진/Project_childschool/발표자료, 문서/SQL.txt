@@ -1,0 +1,68 @@
+SET SQL DIALECT 3;
+
+/* CREATE DATABASE '127.0.0.1/gds_db:C:\Project_childschool\childschool_Server\DB\SCHOOLDB.GDB' USER 'SYSDBA' PASSWORD 'Enter Password here' PAGE_SIZE 4096
+ DEFAULT CHARACTER SET UTF8 */
+COMMIT;
+/*CONNECT '127.0.0.1/gds_db:C:\Project_childschool\childschool_Server\DB\SCHOOLDB.GDB' USER 'SYSDSO' PASSWORD 'Enter Password here'*/
+/* ALTER DATABASE SET SYSTEM ENCRYPTION PASSWORD 'Enter Password here';*/
+COMMIT;
+/* CONNECT '127.0.0.1/gds_db:C:\Project_childschool\childschool_Server\DB\SCHOOLDB.GDB' USER 'SYSDBA' PASSWORD 'Enter Password here'*/
+
+/* Table: MEMO, Owner: SYSDBA */
+
+CREATE TABLE "MEMO" 
+(
+  "M_DATE"	VARCHAR(30),
+  "M_MEMO"	VARCHAR(1000),
+  "M_EDITER"	VARCHAR(30)
+);
+
+/* Table: QANDA, Owner: SYSDBA */
+
+CREATE TABLE "QANDA" 
+(
+  "Q_DATE"	VARCHAR(30),
+  "Q_MEMO"	VARCHAR(1000),
+  "Q_NAME"	VARCHAR(30),
+  "A_DATE"	VARCHAR(30),
+  "A_MEMO"	VARCHAR(1000),
+  "A_NAME"	VARCHAR(30),
+  "RESULT"	INTEGER
+);
+
+/* Table: STUDENT_INFO, Owner: SYSDBA */
+
+CREATE TABLE "STUDENT_INFO" 
+(
+  "S_NAME"	VARCHAR(50) NOT NULL,
+  "S_AGE"	INTEGER,
+  "S_ADDRESS"	VARCHAR(100),
+  "S_CLASS"	VARCHAR(50),
+  "P_NAME"	VARCHAR(50),
+  "P_AGE"	INTEGER,
+  "P_PHONE"	VARCHAR(50),
+  "P_COMMENT"	VARCHAR(1000),
+  "T_IMAGE"	BLOB SUB_TYPE 0 SEGMENT SIZE 80
+);
+
+/* Table: TEACHER, Owner: SYSDBA */
+
+CREATE TABLE "TEACHER" 
+(
+  "T_NAME"	VARCHAR(50) NOT NULL,
+  "T_AGE"	INTEGER,
+  "T_ADDRESS"	VARCHAR(100),
+  "T_PHONE"	VARCHAR(50),
+  "T_DEPT"	VARCHAR(50),
+  "T_MANAGEMENT"	INTEGER,
+  "T_COMMENT"	VARCHAR(1000),
+  "T_SCORE"	INTEGER,
+  "T_IMAGE"	BLOB SUB_TYPE 0 SEGMENT SIZE 80
+);
+
+
+/* Grant Roles for this database */
+
+
+/* Grant permissions for this database */
+
