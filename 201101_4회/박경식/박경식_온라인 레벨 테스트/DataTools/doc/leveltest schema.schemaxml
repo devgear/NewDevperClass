@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemadesigner version="6.5">
+<source>
+<database charset="euckr" collation="euckr_korean_ci">leveltest</database>
+</source>
+<canvas zoom="100">
+<tables>
+<table name="g4_member" view="colnames">
+<left>0</left>
+<top>0</top>
+<width>125</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `g4_member` (
+  `mb_id` varchar(32) CHARACTER SET euckr DEFAULT NULL,
+  `mb_name` varchar(32) CHARACTER SET euckr DEFAULT NULL,
+  `relation` int(11) DEFAULT NULL,
+  `mb_password` varchar(32) CHARACTER SET euckr DEFAULT NULL,
+  `auth` enum('Y','N') CHARACTER SET euckr DEFAULT NULL,
+  `mb_level` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="guest_member" view="colnames">
+<left>130</left>
+<top>0</top>
+<width>96</width>
+<height>175</height>
+<sql_create_table>CREATE TABLE `guest_member` (
+  `g_id` char(38) CHARACTER SET euckr NOT NULL,
+  `g_name` char(20) CHARACTER SET euckr NOT NULL,
+  `g_phone` char(30) CHARACTER SET euckr NOT NULL,
+  `g_school` char(30) CHARACTER SET euckr NOT NULL,
+  `g_grade` char(30) CHARACTER SET euckr NOT NULL,
+  `relation` int(11) DEFAULT NULL,
+  PRIMARY KEY (`g_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="leveltest_permission" view="colnames">
+<left>231</left>
+<top>0</top>
+<width>109</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `leveltest_permission` (
+  `mb_id` varchar(32) CHARACTER SET euckr NOT NULL,
+  `test_id` int(11) NOT NULL,
+  `begin_date` date DEFAULT NULL,
+  `end_date` date DEFAULT NULL,
+  PRIMARY KEY (`mb_id`,`test_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="leveltest_result" view="colnames">
+<left>345</left>
+<top>0</top>
+<width>104</width>
+<height>226</height>
+<sql_create_table>CREATE TABLE `leveltest_result` (
+  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `mb_id` varchar(32) CHARACTER SET euckr NOT NULL,
+  `test_idx` int(11) NOT NULL,
+  `start_time` datetime DEFAULT NULL,
+  `end_time` datetime DEFAULT NULL,
+  `right` tinyint(4) DEFAULT NULL,
+  `wrong` tinyint(4) DEFAULT NULL,
+  `score` tinyint(4) DEFAULT NULL,
+  `mark` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`mb_id`,`test_idx`),
+  UNIQUE KEY `NewIndex1` (`idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="leveltest_result_detail" view="colnames">
+<left>454</left>
+<top>0</top>
+<width>157</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `leveltest_result_detail` (
+  `leveltest_result_idx` int(11) NOT NULL,
+  `section` enum('Listening','Speaking','Writing','Reading') CHARACTER SET euckr NOT NULL,
+  `quiz_number` tinyint(4) NOT NULL,
+  `answer` text CHARACTER SET euckr,
+  `point` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`leveltest_result_idx`,`section`,`quiz_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="listening" view="colnames">
+<left>447</left>
+<top>301</top>
+<width>93</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `listening` (
+  `test_idx` int(11) NOT NULL,
+  `quiz_idx` int(11) NOT NULL,
+  PRIMARY KEY (`test_idx`,`quiz_idx`),
+  KEY `FK_listening_quiz` (`quiz_idx`),
+  CONSTRAINT `FK_listening` FOREIGN KEY (`test_idx`) REFERENCES `test` (`idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="quiz" view="colnames">
+<left>760</left>
+<top>341</top>
+<width>94</width>
+<height>209</height>
+<sql_create_table>CREATE TABLE `quiz` (
+  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `number` int(11) DEFAULT NULL,
+  `question` varchar(256) CHARACTER SET euckr DEFAULT NULL,
+  `A` varchar(256) CHARACTER SET euckr DEFAULT NULL,
+  `B` varchar(256) CHARACTER SET euckr DEFAULT NULL,
+  `C` varchar(256) CHARACTER SET euckr DEFAULT NULL,
+  `D` varchar(256) CHARACTER SET euckr DEFAULT NULL,
+  `answer` char(1) CHARACTER SET euckr DEFAULT NULL,
+  PRIMARY KEY (`idx`),
+  CONSTRAINT `FK_quiz` FOREIGN KEY (`idx`) REFERENCES `listening` (`quiz_idx`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="reading" view="colnames">
+<left>180</left>
+<top>590</top>
+<width>124</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `reading` (
+  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `test_idx` int(11) NOT NULL,
+  `example_seq` tinyint(4) NOT NULL,
+  `example_text` text CHARACTER SET euckr,
+  PRIMARY KEY (`test_idx`),
+  UNIQUE KEY `NewIndex1` (`idx`),
+  CONSTRAINT `FK_reading` FOREIGN KEY (`test_idx`) REFERENCES `test` (`idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="reading_example_quiz" view="colnames">
+<left>623</left>
+<top>183</top>
+<width>113</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `reading_example_quiz` (
+  `reading_idx` int(11) DEFAULT NULL,
+  `quiz_idx` int(11) DEFAULT NULL,
+  UNIQUE KEY `FK_reading_example_quiz` (`quiz_idx`),
+  CONSTRAINT `FK_reading_example_quiz` FOREIGN KEY (`quiz_idx`) REFERENCES `quiz` (`idx`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="speaking" view="colnames">
+<left>137</left>
+<top>399</top>
+<width>130</width>
+<height>141</height>
+<sql_create_table>CREATE TABLE `speaking` (
+  `test_idx` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
+  `quiz` varchar(256) CHARACTER SET euckr DEFAULT NULL,
+  `response_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`test_idx`,`number`),
+  CONSTRAINT `FK_speaking` FOREIGN KEY (`test_idx`) REFERENCES `test` (`idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="test" view="colnames">
+<left>326</left>
+<top>401</top>
+<width>67</width>
+<height>107</height>
+<sql_create_table>CREATE TABLE `test` (
+  `idx` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(64) CHARACTER SET euckr DEFAULT NULL,
+  PRIMARY KEY (`idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+<table name="writing" view="colnames">
+<left>535</left>
+<top>458</top>
+<width>124</width>
+<height>158</height>
+<sql_create_table>CREATE TABLE `writing` (
+  `test_idx` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
+  `example_text` text CHARACTER SET euckr,
+  `quiz` varchar(256) CHARACTER SET euckr DEFAULT NULL,
+  `sound` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`test_idx`,`number`),
+  CONSTRAINT `FK_writing` FOREIGN KEY (`test_idx`) REFERENCES `test` (`idx`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1</sql_create_table>
+</table>
+</tables>
+</canvas>
+</schemadesigner>

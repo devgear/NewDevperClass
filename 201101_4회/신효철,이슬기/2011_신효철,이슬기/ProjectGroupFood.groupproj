@@ -1,0 +1,72 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{EE9F0622-1A7F-41EE-9334-EAA3C547C82A}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="web\Pweb.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="jubang\Pjubang.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="BarProject\pBar.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="BarProject\pReader.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Pweb">
+			<MSBuild Projects="web\Pweb.dproj"/>
+		</Target>
+		<Target Name="Pweb:Clean">
+			<MSBuild Projects="web\Pweb.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Pweb:Make">
+			<MSBuild Projects="web\Pweb.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Pjubang">
+			<MSBuild Projects="jubang\Pjubang.dproj"/>
+		</Target>
+		<Target Name="Pjubang:Clean">
+			<MSBuild Projects="jubang\Pjubang.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Pjubang:Make">
+			<MSBuild Projects="jubang\Pjubang.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="pBar">
+			<MSBuild Projects="BarProject\pBar.dproj"/>
+		</Target>
+		<Target Name="pBar:Clean">
+			<MSBuild Projects="BarProject\pBar.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="pBar:Make">
+			<MSBuild Projects="BarProject\pBar.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="pReader">
+			<MSBuild Projects="BarProject\pReader.dproj"/>
+		</Target>
+		<Target Name="pReader:Clean">
+			<MSBuild Projects="BarProject\pReader.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="pReader:Make">
+			<MSBuild Projects="BarProject\pReader.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Pweb;Pjubang;pBar;pReader"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Pweb:Clean;Pjubang:Clean;pBar:Clean;pReader:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Pweb:Make;Pjubang:Make;pBar:Make;pReader:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

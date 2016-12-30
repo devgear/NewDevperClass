@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{C10BED18-D4FA-4709-A6C5-CE96656D067C}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="PMTB_Client.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PMTB.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="MTBWeb\MTBWeb.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="PMTB_Client">
+			<MSBuild Projects="PMTB_Client.dproj"/>
+		</Target>
+		<Target Name="PMTB_Client:Clean">
+			<MSBuild Projects="PMTB_Client.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PMTB_Client:Make">
+			<MSBuild Projects="PMTB_Client.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="PMTB">
+			<MSBuild Projects="PMTB.dproj"/>
+		</Target>
+		<Target Name="PMTB:Clean">
+			<MSBuild Projects="PMTB.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="PMTB:Make">
+			<MSBuild Projects="PMTB.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="MTBWeb">
+			<MSBuild Projects="MTBWeb\MTBWeb.dproj"/>
+		</Target>
+		<Target Name="MTBWeb:Clean">
+			<MSBuild Projects="MTBWeb\MTBWeb.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="MTBWeb:Make">
+			<MSBuild Projects="MTBWeb\MTBWeb.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="PMTB_Client;PMTB;MTBWeb"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="PMTB_Client:Clean;PMTB:Clean;MTBWeb:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="PMTB_Client:Make;PMTB:Make;MTBWeb:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

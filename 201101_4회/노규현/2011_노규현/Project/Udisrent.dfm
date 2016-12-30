@@ -1,0 +1,29 @@
+object DisForm: TDisForm
+  Left = 0
+  Top = 0
+  Caption = #49345#49464#51312#54924
+  ClientHeight = 202
+  ClientWidth = 318
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StringGrid1: TStringGrid
+    Left = 8
+    Top = 17
+    Width = 278
+    Height = 177
+    ColCount = 2
+    RowCount = 6
+    FixedRows = 0
+    ScrollBars = ssNone
+    TabOrder = 0
+    OnDrawCell = StringGrid1DrawCell
+  end
+end

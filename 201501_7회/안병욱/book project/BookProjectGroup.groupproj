@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{78F8C6DA-9670-4715-821F-ABC93364C4C1}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BookProject.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="BookServer\BookServerProject.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="android\mBookProject.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="BookProject">
+        <MSBuild Projects="BookProject.dproj"/>
+    </Target>
+    <Target Name="BookProject:Clean">
+        <MSBuild Projects="BookProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BookProject:Make">
+        <MSBuild Projects="BookProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BookServerProject">
+        <MSBuild Projects="BookServer\BookServerProject.dproj"/>
+    </Target>
+    <Target Name="BookServerProject:Clean">
+        <MSBuild Projects="BookServer\BookServerProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BookServerProject:Make">
+        <MSBuild Projects="BookServer\BookServerProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="mBookProject">
+        <MSBuild Projects="android\mBookProject.dproj"/>
+    </Target>
+    <Target Name="mBookProject:Clean">
+        <MSBuild Projects="android\mBookProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="mBookProject:Make">
+        <MSBuild Projects="android\mBookProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="BookProject;BookServerProject;mBookProject"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="BookProject:Clean;BookServerProject:Clean;mBookProject:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="BookProject:Make;BookServerProject:Make;mBookProject:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{743152E1-2CFD-4679-B2C0-8ABCA615C763}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="pMessanger.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="서버쪽프로그램\pServerMessenger.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="pMessanger">
+			<MSBuild Projects="pMessanger.dproj"/>
+		</Target>
+		<Target Name="pMessanger:Clean">
+			<MSBuild Projects="pMessanger.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="pMessanger:Make">
+			<MSBuild Projects="pMessanger.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="pServerMessenger">
+			<MSBuild Projects="서버쪽프로그램\pServerMessenger.dproj"/>
+		</Target>
+		<Target Name="pServerMessenger:Clean">
+			<MSBuild Projects="서버쪽프로그램\pServerMessenger.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="pServerMessenger:Make">
+			<MSBuild Projects="서버쪽프로그램\pServerMessenger.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="pMessanger;pServerMessenger"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="pMessanger:Clean;pServerMessenger:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="pMessanger:Make;pServerMessenger:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

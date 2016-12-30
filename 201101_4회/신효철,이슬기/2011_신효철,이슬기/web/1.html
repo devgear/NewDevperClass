@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>객실 안내
+</title>
+<meta name="author" content="shin">
+<meta name="namo-theme" content="theme\Abstract\Restaurant">
+<meta http-equiv="content-type" content="text/html; charset=euc-kr">
+<style>
+<!--
+body { font-family:굴림; font-size:9pt; color:rgb(49,0,0); }
+h1 { font-family:바탕; font-size:14pt; color:gray; }
+h2 { font-family:바탕; font-size:14pt; color:rgb(230,128,15); }
+p.namo-list { color:maroon; }
+p.namo-sublist { color:rgb(221,116,0); }
+table.namo-table { font-size:9pt; color:rgb(49,0,0); border-color:rgb(224,148,91); }
+table.namo-table td { font-size:9pt; color:rgb(49,0,0); border-color:rgb(255,203,143); }
+table.namo-table th { font-size:9pt; color:rgb(49,0,0); background-color:rgb(255,203,143); }
+span.namo-link, a:link { color:red; }
+span.namo-visited, a:visited { color:gray; }
+span.namo-active, a:active { color:rgb(254,139,90); }
+li.namo-list1 { list-style-image:url('nav/bullet1.gif'); }
+li.namo-list2 { list-style-image:url('nav/bullet2.gif'); }
+-->
+</style>
+
+
+
+
+
+
+<script language="JavaScript">
+<!--
+function na_restore_img_src(name, nsdoc)
+{
+  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
+  if (name == '')
+    return;
+  if (img && img.altsrc) {
+    img.src    = img.altsrc;
+    img.altsrc = null;
+  }
+}
+
+function na_preload_img()
+{
+  var img_list = na_preload_img.arguments;
+  if (document.preloadlist == null)
+    document.preloadlist = new Array();
+  var top = document.preloadlist.length;
+  for (var i=0; i < img_list.length-1; i++) {
+    document.preloadlist[top+i] = new Image;
+    document.preloadlist[top+i].src = img_list[i+1];
+  }
+}
+
+function na_change_img_src(name, nsdoc, rpath, preload)
+{
+  var img = eval((navigator.appName.indexOf('Netscape', 0) != -1) ? nsdoc+'.'+name : 'document.all.'+name);
+  if (name == '')
+    return;
+  if (img) {
+    img.altsrc = img.src;
+    img.src    = rpath;
+  }
+}
+
+// -->
+</script>
+
+</head><body background="images/nth_theme_abstract_restaurant_bg.gif" OnLoad="na_preload_img(false, '../nav/nav_6_index_btn_homer.gif', '../nav/nav_6_location_tvr.gif', '../nav/nav_6_reservation_tvr.gif');">
+
+<table cellpadding="0" cellspacing="0" width="856">
+    <tr>
+        <td width="64" height="176">
+            <p align="center">&nbsp;
+</p>
+        </td>
+        <td width="792" height="176">
+<!--NAMO_NAVBAR_START B H C       -1 0 2 4 3 5 -->
+<div align="center">
+<img src="..\nav\nav_1_menu_bhb.gif" name="nav_rooms_BH0"
+border="0" class="namo-banner" alt="메뉴 소개" align="textTop" width="771" height="110">
+            <p><!--NAMO_NAVBAR_END-->
+</p>
+            <p>&nbsp;
+</p>
+<a href="http://localhost/bar/Debug/Win32/Pweb.exe"
+onmouseover="na_change_img_src('nav_rooms_TV0', 'document', '../nav/nav_6_index_btn_homer.gif', true);"
+onmouseout="na_restore_img_src('nav_rooms_TV0', 'document')"><img src="..\nav\nav_6_index_btn_home.gif" name="nav_rooms_TV0"
+border="0" class="namo-button1" alt="시작" align="textTop"></a><img src="..\nav\nav_6_menu_thh.gif" name="nav_reservation_TV4"
+border="0" class="namo-hibutton1" alt="메뉴 소개" align="textTop">
+<a href="http://localhost/bar/Debug/Win32/Pweb.exe/location"
+onmouseover="na_change_img_src('nav_rooms_TV3', 'document', '../nav/nav_6_location_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_rooms_TV3', 'document')"><img src="..\nav\nav_6_location_tv.gif" name="nav_rooms_TV3"
+border="0" class="namo-button1" alt="위치" align="textTop"></a>
+<a href="http://localhost/bar/Debug/Win32/Pweb.exe/reservation"
+onmouseover="na_change_img_src('nav_rooms_TV4', 'document', '../nav/nav_6_reservation_tvr.gif', true);"
+onmouseout="na_restore_img_src('nav_rooms_TV4', 'document')"><img src="..\nav\nav_6_reservation_tv.gif" name="nav_rooms_TV4"
+border="0" class="namo-button1" alt="예약 정보" align="textTop"></a></div>
+        </td>
+    </tr>
+    <tr>
+        <td width="64" valign="top" rowspan="2">
+            <p>&nbsp;
+</p>
+            <p>&nbsp;
+</p>
+        </td>
+        <td width="792">
+<font size="2">
+<!--NAMO_NAVBAR_START I h         -1 0 2 4 3 5 -->
+<div>[<a href="http://localhost/bar/Debug/Win32/Pweb.exe"  onmouseover="" onmouseout="">시작
+</a>][메뉴 소개]
+</div>
+<!--NAMO_NAVBAR_END-->
+</font>        </td>
+    </tr>
+    <tr>
+        <td width="792">
+            <p class="namo-table" align="center">&nbsp;
+</p>
+                <table align="center" border="0" width="80%" bordercolordark="#707070" bordercolorlight="silver" cellspacing="2" class="namo-table">
+                    <tr>
+                       <td style="WIDTH: 315px"><img src="..\nav\m_ramen.bmp"></img></td>
+                       <td rowspan="5"><font size="4"><#foodlist></font></td>
+                    </tr>
+                    <tr>
+                       <td style="WIDTH: 315px"><img src="..\nav\m_friedchicken.bmp"></img></td>
+                    </tr>
+                    <tr>
+                       <td style="WIDTH: 315px"><img src="..\nav\m_fruit.bmp"></img></td>
+                    </tr>
+                    <tr>
+                       <td style="WIDTH: 315px"><img src="..\nav\m_mussel.bmp"></img></td>
+                    </tr>
+                    <tr>
+                       <td style="WIDTH: 315px"><img src="..\nav\m_nurungji.bmp"></img></td>
+                    </tr>
+	   </table>
+	   <p>&nbsp;
+</p>
+           </td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B70E59B2-B5A9-4B2E-9934-7D46A6B9A1BE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Coffee_server\P_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Coffee_mobile\P_Mobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Coffee_vcl\P_Vcl.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="P_Server">
+        <MSBuild Projects="Coffee_server\P_Server.dproj"/>
+    </Target>
+    <Target Name="P_Server:Clean">
+        <MSBuild Projects="Coffee_server\P_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="P_Server:Make">
+        <MSBuild Projects="Coffee_server\P_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="P_Mobile">
+        <MSBuild Projects="Coffee_mobile\P_Mobile.dproj"/>
+    </Target>
+    <Target Name="P_Mobile:Clean">
+        <MSBuild Projects="Coffee_mobile\P_Mobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="P_Mobile:Make">
+        <MSBuild Projects="Coffee_mobile\P_Mobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="P_Vcl">
+        <MSBuild Projects="Coffee_vcl\P_Vcl.dproj"/>
+    </Target>
+    <Target Name="P_Vcl:Clean">
+        <MSBuild Projects="Coffee_vcl\P_Vcl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="P_Vcl:Make">
+        <MSBuild Projects="Coffee_vcl\P_Vcl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="P_Server;P_Mobile;P_Vcl"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="P_Server:Clean;P_Mobile:Clean;P_Vcl:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="P_Server:Make;P_Mobile:Make;P_Vcl:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

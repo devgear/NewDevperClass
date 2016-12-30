@@ -1,0 +1,9 @@
+node2 > NAME = customer, IMG = model-tree/ST_Actor.gif, REF = package-summary.html#RefID=1349->classFrame;
+node3 > NAME = client record, IMG = model-tree/ST_Use Case.gif, REF = package-summary.html#RefID=1355->classFrame;
+node4 > NAME = lent  video, IMG = model-tree/ST_Use Case.gif, REF = package-summary.html#RefID=1363->classFrame;
+node5 > NAME = return video, IMG = model-tree/ST_Use Case.gif, REF = package-summary.html#RefID=1382->classFrame;
+node6 > NAME = video record, IMG = model-tree/ST_Use Case.gif, REF = package-summary.html#RefID=1388->classFrame;
+node7 > NAME = administration, IMG = model-tree/ST_Actor.gif, REF = package-summary.html#RefID=1392->classFrame;
+node1 > NAME = Use Case Diagram1, IMG = model-tree/ST_Use Case Diagram.gif, REF = Use_Case_Diagram1.txvuse.html->classFrame, REF = doc-files/Use_Case_Diagram1.txvuse.html->imageFrame, CHILDS = node2:node3:node4:node5:node6:node7;
+node0 > NAME = PShop, IMG = model-tree/ST_Project.gif, REF = overview-summary.html->classFrame, CHILDS = node1;
+ROOT > CHILDS = node0

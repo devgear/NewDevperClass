@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Model name="PShop" id="PShop" language="delphi">
+  <DesignElement name="lent  video" id="ID=1363" metaclass="Use Case">
+    <Property name="Abstract">False</Property>
+  </DesignElement>
+  <DesignElement name="customer" id="ID=1349" metaclass="Actor">
+    <Link targetName="Association Link1" id="ID=1378" metaclass="Association Link" idref="ID=1363">
+      <Property name="Client Navigable">unspecified navigability</Property>
+      <Property name="Client Derived">False</Property>
+      <Property name="Supplier Derived">False</Property>
+      <Property name="Directed">False</Property>
+      <Property name="Client">customer</Property>
+      <Property name="Supplier">lent  video</Property>
+      <Property name="Supplier Navigable">unspecified navigability</Property>
+      <Property name="Supplier Union">False</Property>
+      <Property name="Type">association</Property>
+      <Property name="Client Union">False</Property>
+      <Property name="Stereotype">communicate</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="client record" id="ID=1355" metaclass="Use Case">
+    <Property name="Abstract">False</Property>
+    <Link targetName="Association Link1" id="ID=1359" metaclass="Association Link" idref="ID=1349">
+      <Property name="Client Navigable">unspecified navigability</Property>
+      <Property name="Client Derived">False</Property>
+      <Property name="Supplier Derived">False</Property>
+      <Property name="Directed">False</Property>
+      <Property name="Client">client record</Property>
+      <Property name="Supplier">customer</Property>
+      <Property name="Supplier Navigable">unspecified navigability</Property>
+      <Property name="Supplier Union">False</Property>
+      <Property name="Type">association</Property>
+      <Property name="Client Union">False</Property>
+      <Property name="Stereotype">communicate</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="return video" id="ID=1382" metaclass="Use Case">
+    <Property name="Abstract">False</Property>
+    <Link targetName="Association Link1" id="ID=1384" metaclass="Association Link" idref="ID=1349">
+      <Property name="Client Navigable">unspecified navigability</Property>
+      <Property name="Client Derived">False</Property>
+      <Property name="Supplier Derived">False</Property>
+      <Property name="Directed">False</Property>
+      <Property name="Client">return video</Property>
+      <Property name="Supplier">customer</Property>
+      <Property name="Supplier Navigable">unspecified navigability</Property>
+      <Property name="Supplier Union">False</Property>
+      <Property name="Type">association</Property>
+      <Property name="Client Union">False</Property>
+      <Property name="Stereotype">communicate</Property>
+    </Link>
+    <Link targetName="Generalization Link1" id="ID=1404" metaclass="Generalization Link" idref="ID=1363">
+      <Property name="Supplier">lent  video</Property>
+      <Property name="Client">return video</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="administration" id="ID=1392" metaclass="Actor">
+    <Link targetName="Association Link1" id="ID=1400" metaclass="Association Link" idref="ID=1355">
+      <Property name="Client Navigable">unspecified navigability</Property>
+      <Property name="Client Derived">False</Property>
+      <Property name="Supplier Derived">False</Property>
+      <Property name="Directed">False</Property>
+      <Property name="Client">administration</Property>
+      <Property name="Supplier">client record</Property>
+      <Property name="Supplier Navigable">unspecified navigability</Property>
+      <Property name="Supplier Union">False</Property>
+      <Property name="Type">association</Property>
+      <Property name="Client Union">False</Property>
+      <Property name="Stereotype">communicate</Property>
+    </Link>
+  </DesignElement>
+  <DesignElement name="video record" id="ID=1388" metaclass="Use Case">
+    <Property name="Abstract">False</Property>
+    <Link targetName="Generalization Link1" id="ID=1390" metaclass="Generalization Link" idref="ID=1363">
+      <Property name="Supplier">lent  video</Property>
+      <Property name="Client">video record</Property>
+    </Link>
+    <Link targetName="Association Link1" id="ID=1394" metaclass="Association Link" idref="ID=1392">
+      <Property name="Client Navigable">unspecified navigability</Property>
+      <Property name="Client Derived">False</Property>
+      <Property name="Supplier Derived">False</Property>
+      <Property name="Directed">False</Property>
+      <Property name="Client">video record</Property>
+      <Property name="Supplier">administration</Property>
+      <Property name="Supplier Navigable">unspecified navigability</Property>
+      <Property name="Supplier Union">False</Property>
+      <Property name="Type">association</Property>
+      <Property name="Client Union">False</Property>
+      <Property name="Stereotype">communicate</Property>
+    </Link>
+  </DesignElement>
+  <Diagram name="Use Case Diagram1" id="ID=1230" metaclass="Use Case Diagram" file="Use_Case_Diagram1.txvuse.html">
+    <DiagramReference id="ID=1350" element="ID=1349" metaclass="Actor">
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="bounds">40,160,107,246</Property>
+      <DiagramReference id="ID=1379" element="ID=1378" metaclass="Association Link">
+        <Property name="Client Navigable">unspecified navigability</Property>
+        <Property name="Client Derived">False</Property>
+        <Property name="Supplier Derived">False</Property>
+        <Property name="Directed">False</Property>
+        <Property name="Client">customer</Property>
+        <Property name="Supplier">lent  video</Property>
+        <Property name="Supplier Navigable">unspecified navigability</Property>
+        <Property name="Supplier Union">False</Property>
+        <Property name="Type">association</Property>
+        <Property name="Client Union">False</Property>
+        <Property name="Stereotype">communicate</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=1356" element="ID=1355" metaclass="Use Case">
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Abstract">False</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="bounds">260,80,381,112</Property>
+      <DiagramReference id="ID=1360" element="ID=1359" metaclass="Association Link">
+        <Property name="Client Navigable">unspecified navigability</Property>
+        <Property name="Client Derived">False</Property>
+        <Property name="Supplier Derived">False</Property>
+        <Property name="Directed">False</Property>
+        <Property name="Client">client record</Property>
+        <Property name="Supplier">customer</Property>
+        <Property name="Supplier Navigable">unspecified navigability</Property>
+        <Property name="Supplier Union">False</Property>
+        <Property name="Type">association</Property>
+        <Property name="Client Union">False</Property>
+        <Property name="Stereotype">communicate</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=1364" element="ID=1363" metaclass="Use Case">
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Abstract">False</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="bounds">260,160,380,200</Property>
+    </DiagramReference>
+    <DiagramReference id="ID=1383" element="ID=1382" metaclass="Use Case">
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Abstract">False</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="bounds">260,260,379,292</Property>
+      <DiagramReference id="ID=1385" element="ID=1384" metaclass="Association Link">
+        <Property name="Client Navigable">unspecified navigability</Property>
+        <Property name="Client Derived">False</Property>
+        <Property name="Supplier Derived">False</Property>
+        <Property name="Directed">False</Property>
+        <Property name="Client">return video</Property>
+        <Property name="Supplier">customer</Property>
+        <Property name="Supplier Navigable">unspecified navigability</Property>
+        <Property name="Supplier Union">False</Property>
+        <Property name="Type">association</Property>
+        <Property name="Client Union">False</Property>
+        <Property name="Stereotype">communicate</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=1405" element="ID=1404" metaclass="Generalization Link">
+        <Property name="Supplier">lent  video</Property>
+        <Property name="Client">return video</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=1389" element="ID=1388" metaclass="Use Case">
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Abstract">False</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="bounds">460,160,581,192</Property>
+      <DiagramReference id="ID=1391" element="ID=1390" metaclass="Generalization Link">
+        <Property name="Supplier">lent  video</Property>
+        <Property name="Client">video record</Property>
+      </DiagramReference>
+      <DiagramReference id="ID=1395" element="ID=1394" metaclass="Association Link">
+        <Property name="Client Navigable">unspecified navigability</Property>
+        <Property name="Client Derived">False</Property>
+        <Property name="Supplier Derived">False</Property>
+        <Property name="Directed">False</Property>
+        <Property name="Client">video record</Property>
+        <Property name="Supplier">administration</Property>
+        <Property name="Supplier Navigable">unspecified navigability</Property>
+        <Property name="Supplier Union">False</Property>
+        <Property name="Type">association</Property>
+        <Property name="Client Union">False</Property>
+        <Property name="Stereotype">communicate</Property>
+      </DiagramReference>
+    </DiagramReference>
+    <DiagramReference id="ID=1393" element="ID=1392" metaclass="Actor">
+      <Property name="Color Area">Whole Shape</Property>
+      <Property name="Gradient Mode">Vertical</Property>
+      <Property name="Gradient color 2">255, 255, 255</Property>
+      <Property name="Gradient ON">False</Property>
+      <Property name="Gradient color 1">255, 255, 255</Property>
+      <Property name="bounds">460,20,555,106</Property>
+      <DiagramReference id="ID=1401" element="ID=1400" metaclass="Association Link">
+        <Property name="Client Navigable">unspecified navigability</Property>
+        <Property name="Client Derived">False</Property>
+        <Property name="Supplier Derived">False</Property>
+        <Property name="Directed">False</Property>
+        <Property name="Client">administration</Property>
+        <Property name="Supplier">client record</Property>
+        <Property name="Supplier Navigable">unspecified navigability</Property>
+        <Property name="Supplier Union">False</Property>
+        <Property name="Type">association</Property>
+        <Property name="Client Union">False</Property>
+        <Property name="Stereotype">communicate</Property>
+      </DiagramReference>
+    </DiagramReference>
+  </Diagram>
+</Model>

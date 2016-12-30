@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A4C71B4C-839B-49BF-AD96-9377172DF421}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Manager.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="C:\델파이\프로젝트클라이언트\Uclientmanager.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Manager">
+			<MSBuild Projects="Manager.dproj"/>
+		</Target>
+		<Target Name="Manager:Clean">
+			<MSBuild Projects="Manager.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Manager:Make">
+			<MSBuild Projects="Manager.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Uclientmanager">
+			<MSBuild Projects="C:\델파이\프로젝트클라이언트\Uclientmanager.dproj"/>
+		</Target>
+		<Target Name="Uclientmanager:Clean">
+			<MSBuild Projects="C:\델파이\프로젝트클라이언트\Uclientmanager.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Uclientmanager:Make">
+			<MSBuild Projects="C:\델파이\프로젝트클라이언트\Uclientmanager.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Manager;Uclientmanager"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Manager:Clean;Uclientmanager:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Manager:Make;Uclientmanager:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

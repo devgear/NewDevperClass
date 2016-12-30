@@ -1,0 +1,143 @@
+/*
+ * ER/Studio Data Architect 9.0 SQL Code Generation
+ * Project :      project.DM1
+ *
+ * Date Created : 2011년 1월 25일 화요일 오전 11:09:42
+ * Target DBMS : InterBase 2009
+ */
+
+/* 
+ * TABLE: "branch" 
+ */
+
+CREATE TABLE "branch"(
+    "branch_id"  VARCHAR(10)    NOT NULL,
+    "name"       VARCHAR(20),
+    "address"    VARCHAR(10),
+    "tel"        VARCHAR(10),
+    CONSTRAINT PK7 PRIMARY KEY ("branch_id")
+)
+;
+
+
+
+/* 
+ * TABLE: "car" 
+ */
+
+CREATE TABLE "car"(
+    "car_id"     VARCHAR(10)    NOT NULL,
+    "num"        VARCHAR(18),
+    "name"       VARCHAR(12),
+    "age"        VARCHAR(18),
+    "type"       VARCHAR(10),
+    "branch_id"  VARCHAR(10),
+    "price"      VARCHAR(18),
+    "auto"       VARCHAR(2),
+    CONSTRAINT PK8 PRIMARY KEY ("car_id")
+)
+;
+
+
+
+/* 
+ * TABLE: "Custom" 
+ */
+
+CREATE TABLE "Custom"(
+    "c_id"         VARCHAR(10)     NOT NULL,
+    "name"         VARCHAR(10),
+    "tel"          VARCHAR(18),
+    "address"      VARCHAR(40),
+    "license_num"  VARCHAR(20),
+    "jumin"        VARCHAR(20),
+    "bigo"         VARCHAR(100),
+    CONSTRAINT PK5 PRIMARY KEY ("c_id")
+)
+;
+
+
+
+/* 
+ * TABLE: "rental" 
+ */
+
+CREATE TABLE "rental"(
+    "rental_id"    VARCHAR(10)    NOT NULL,
+    "car_id"       VARCHAR(10)    NOT NULL,
+    "c_id"         VARCHAR(10)    NOT NULL,
+    "branch_id"    VARCHAR(10),
+    "price"        INTEGER,
+    "use_date"     INTEGER,
+    "rental_date"  DATE,
+    "back_date"    DATE,
+    "rev_num"      VARCHAR(10)    NOT NULL,
+    "car_status"   VARCHAR(50),
+    "penalty"      VARCHAR(20),
+    CONSTRAINT PK10 PRIMARY KEY ("rental_id")
+)
+;
+
+
+
+/* 
+ * TABLE: "rev" 
+ */
+
+CREATE TABLE "rev"(
+    "rev_num"    VARCHAR(10)    NOT NULL,
+    "c_id"       VARCHAR(10),
+    "rev_date"   DATE,
+    "use_date"   VARCHAR(10),
+    "back_date"  DATE,
+    "price"      INTEGER,
+    "branch_id"  VARCHAR(10),
+    CONSTRAINT PK9 PRIMARY KEY ("rev_num")
+)
+;
+
+
+
+/* 
+ * INDEX: "Ref529" 
+ */
+
+CREATE INDEX "Ref529" ON "rental"("c_id")
+;
+/* 
+ * INDEX: "Ref830" 
+ */
+
+CREATE INDEX "Ref830" ON "rental"("car_id")
+;
+/* 
+ * INDEX: "Ref731" 
+ */
+
+CREATE INDEX "Ref731" ON "rental"("branch_id")
+;
+/* 
+ * TABLE: "rental" 
+ */
+
+ALTER TABLE "rental" ADD CONSTRAINT "RefCustom29" 
+    FOREIGN KEY ("c_id")
+    REFERENCES "Custom"("c_id")
+;
+
+ALTER TABLE "rental" ADD CONSTRAINT "Refcar30" 
+    FOREIGN KEY ("car_id")
+    REFERENCES "car"("car_id")
+;
+
+ALTER TABLE "rental" ADD CONSTRAINT "Refbranch31" 
+    FOREIGN KEY ("branch_id")
+    REFERENCES "branch"("branch_id")
+;
+
+ALTER TABLE "rental" ADD CONSTRAINT "Refrev37" 
+    FOREIGN KEY ("rev_num")
+    REFERENCES "rev"("rev_num")
+;
+
+

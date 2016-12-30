@@ -1,0 +1,56 @@
+inherited MainForm_NmXhdpiPh: TMainForm_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited TabControl1: TTabControl
+    Size.Width = 400.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited TabItem2: TTabItem
+      inherited TabControl2: TTabControl
+        Size.Width = 400.000000000000000000
+        Size.Height = 566.000000000000000000
+        inherited TabItem3: TTabItem
+          Size.Width = 100.000000000000000000
+          inherited ListView1: TListView
+            Size.Width = 400.000000000000000000
+            Size.Height = 517.000000000000000000
+          end
+        end
+        inherited TabItem4: TTabItem
+          Size.Width = 100.000000000000000000
+          inherited ListView2: TListView
+            Size.Width = 400.000000000000000000
+            Size.Height = 517.000000000000000000
+          end
+        end
+        inherited TabItem5: TTabItem
+          Size.Width = 100.000000000000000000
+          inherited ToolBar1: TToolBar
+            Size.Width = 400.000000000000000000
+            inherited Edit2: TEdit
+              Size.Width = 182.000000000000000000
+            end
+            inherited Button3: TButton
+              Position.X = 359.000000000000000000
+              Size.Width = 41.000000000000000000
+              Size.Height = 41.000000000000000000
+            end
+          end
+          inherited ListView3: TListView
+            Size.Width = 400.000000000000000000
+            Size.Height = 476.000000000000000000
+          end
+        end
+        inherited TabItem6: TTabItem
+          Size.Width = 100.000000000000000000
+          inherited ToolBar2: TToolBar
+            Size.Width = 400.000000000000000000
+          end
+        end
+      end
+      inherited ToolBar3: TToolBar
+        Size.Width = 400.000000000000000000
+      end
+    end
+  end
+end

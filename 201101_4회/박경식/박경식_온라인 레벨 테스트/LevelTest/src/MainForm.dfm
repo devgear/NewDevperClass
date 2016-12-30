@@ -1,0 +1,116 @@
+object frMain: TfrMain
+  Left = 0
+  Top = 0
+  Caption = 'frMain'
+  ClientHeight = 662
+  ClientWidth = 1008
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PanelMain: TPanel
+    Left = 0
+    Top = 41
+    Width = 1008
+    Height = 621
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 0
+    ExplicitWidth = 865
+    ExplicitHeight = 496
+    object Label1: TLabel
+      Left = 28
+      Top = -4
+      Width = 108
+      Height = 33
+      Caption = #47700#51064#54868#47732
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object btTestResult: TButton
+      Left = 28
+      Top = 35
+      Width = 100
+      Height = 30
+      Caption = #44208#44284#54869#51064
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btTestResultClick
+    end
+    object ListViewTest: TListView
+      Left = 28
+      Top = 71
+      Width = 309
+      Height = 314
+      BiDiMode = bdLeftToRight
+      Columns = <>
+      ParentBiDiMode = False
+      TabOrder = 1
+      ViewStyle = vsList
+      OnDblClick = ListViewTestDblClick
+    end
+    object btConnect: TButton
+      Left = 255
+      Top = 35
+      Width = 82
+      Height = 30
+      Caption = #49884#54744#48372#44592
+      TabOrder = 2
+      OnClick = btConnectClick
+    end
+  end
+  object PanelTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 1008
+    Height = 41
+    Align = alTop
+    BevelOuter = bvNone
+    TabOrder = 1
+    object btExit: TButton
+      Left = 923
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = #51333#47308
+      TabOrder = 0
+      OnClick = btExitClick
+    end
+    object btMain: TButton
+      Left = 838
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = #47700#51064
+      TabOrder = 1
+      Visible = False
+      OnClick = btMainClick
+    end
+    object btAdmin: TButton
+      Left = 749
+      Top = 10
+      Width = 75
+      Height = 25
+      Caption = #44288#47532#51088
+      TabOrder = 2
+      OnClick = btAdminClick
+    end
+  end
+end

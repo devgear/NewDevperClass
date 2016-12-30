@@ -1,0 +1,148 @@
+/*
+ * ER/Studio Data Architect 9.0 SQL Code Generation
+ * Project :      MTBucks2.dm1
+ *
+ * Date Created : 2011년 1월 29일 토요일 오후 6:54:12
+ * Target DBMS : InterBase 2009
+ */
+
+/* 
+ * TABLE: HISTORY 
+ */
+
+CREATE TABLE HISTORY(
+    H_ID       CHAR(10)       NOT NULL,
+    S_ID       VARCHAR(10),
+    I_ID       VARCHAR(10),
+    I_DATE     TIMESTAMP,
+    H_COUNT    CHAR(10),
+    CONSTRAINT PK8 PRIMARY KEY (H_ID)
+)
+;
+
+
+
+/* 
+ * TABLE: ITEM 
+ */
+
+CREATE TABLE ITEM(
+    I_ID       VARCHAR(10)    NOT NULL,
+    S_ID       VARCHAR(10)    NOT NULL,
+    I_NAME     VARCHAR(10),
+    I_COST     INTEGER,
+    I_DATE     TIMESTAMP,
+    I_IMAGE    BLOB,
+    CONSTRAINT PK5 PRIMARY KEY (I_ID)
+)
+;
+
+
+
+/* 
+ * TABLE: SHOP 
+ */
+
+CREATE TABLE SHOP(
+    S_ID        VARCHAR(10)    NOT NULL,
+    C_NAME      VARCHAR(10),
+    C_MASTER    VARCHAR(10),
+    C_PW        VARCHAR(10),
+    C_ADDR      VARCHAR(50),
+    C_TEL       VARCHAR(11),
+    C_JOIN      TIMESTAMP,
+    C_IMAGE     BLOB,
+    CONSTRAINT PK1 PRIMARY KEY (S_ID)
+)
+;
+
+
+
+/* 
+ * TABLE: "USER" 
+ */
+
+CREATE TABLE "USER"(
+    P_ID       VARCHAR(10)    NOT NULL,
+    S_ID       VARCHAR(10)    NOT NULL,
+    P_NAME     VARCHAR(10),
+    P_PW       VARCHAR(10),
+    P_ADDR     VARCHAR(50),
+    P_PHONE    VARCHAR(11),
+    P_JOIN     TIMESTAMP,
+    P_POINT    INTEGER,
+    CONSTRAINT PK2 PRIMARY KEY (P_ID)
+)
+;
+
+
+
+/* 
+ * INDEX: "Ref128" 
+ */
+
+CREATE INDEX "Ref128" ON HISTORY(S_ID)
+;
+/* 
+ * INDEX: "Ref531" 
+ */
+
+CREATE INDEX "Ref531" ON HISTORY(I_ID)
+;
+/* 
+ * INDEX: "Ref532" 
+ */
+
+CREATE INDEX "Ref532" ON HISTORY(I_DATE)
+;
+/* 
+ * INDEX: "Ref118" 
+ */
+
+CREATE INDEX "Ref118" ON ITEM(S_ID)
+;
+/* 
+ * INDEX: "Ref11" 
+ */
+
+CREATE INDEX "Ref11" ON "USER"(S_ID)
+;
+/* 
+ * TABLE: HISTORY 
+ */
+
+ALTER TABLE HISTORY ADD CONSTRAINT "RefSHOP28" 
+    FOREIGN KEY (S_ID)
+    REFERENCES SHOP(S_ID)
+;
+
+ALTER TABLE HISTORY ADD CONSTRAINT "RefITEM31" 
+    FOREIGN KEY (I_ID)
+    REFERENCES ITEM(I_ID)
+;
+
+ALTER TABLE HISTORY ADD CONSTRAINT "RefITEM32" 
+    FOREIGN KEY (I_DATE)
+    REFERENCES ITEM(I_ID)
+;
+
+
+/* 
+ * TABLE: ITEM 
+ */
+
+ALTER TABLE ITEM ADD CONSTRAINT "RefSHOP18" 
+    FOREIGN KEY (S_ID)
+    REFERENCES SHOP(S_ID)
+;
+
+
+/* 
+ * TABLE: "USER" 
+ */
+
+ALTER TABLE "USER" ADD CONSTRAINT "RefSHOP1" 
+    FOREIGN KEY (S_ID)
+    REFERENCES SHOP(S_ID)
+;
+

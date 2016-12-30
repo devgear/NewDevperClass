@@ -1,0 +1,186 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{EBB57465-A6B5-4A37-9844-42D2DAE35633}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<MainSource>DataTools.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<Base>True</Base>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>rtl;vcl;xmlrtl;vclactnband;vclx;VclSmp;vclimg;svnui;svn;bdertl;TeeUI;TeeDB;Tee;vcldb;dbrtl;vcldbx;vcltouch;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;tmsd2010;tmsexd2010;tmswizd2010;DirectX9_;DSPackR</DCC_UsePackage>
+			<UsePackages>true</UsePackages>
+			<DCC_ExeOutput>..\bin\</DCC_ExeOutput>
+			<DCC_DependencyCheckOutputName>..\bin\DataTools.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="DataTools.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="MainForm.pas">
+				<Form>frMain</Form>
+			</DCCReference>
+			<DCCReference Include="ListeningForm.pas">
+				<Form>frListening</Form>
+			</DCCReference>
+			<DCCReference Include="WritingForm.pas">
+				<Form>frWriting</Form>
+			</DCCReference>
+			<DCCReference Include="SpeakingForm.pas">
+				<Form>frSpeaking</Form>
+			</DCCReference>
+			<DCCReference Include="ReadingForm.pas">
+				<Form>frReading</Form>
+			</DCCReference>
+			<DCCReference Include="SoundFrame.pas">
+				<Form>frmSound</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="QuestionSelectFrame.pas">
+				<Form>frmQuestionSelect</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ExampleFrame.pas">
+				<Form>frmExample</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="QuestionABCDInputFrame.pas">
+				<Form>frmQuestionABCDInput</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="QuestionInputFrame.pas">
+				<Form>frmQuestionInput</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="TestClasses.pas"/>
+			<DCCReference Include="MainSQLUnit.pas"/>
+			<DCCReference Include="JoanModule.pas">
+				<Form>dmJoan</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="SpeakingSQLUnit.pas"/>
+			<DCCReference Include="DAOTest.pas"/>
+			<DCCReference Include="ListeningSQLUnit.pas"/>
+			<DCCReference Include="WritingSQLUnit.pas"/>
+			<DCCReference Include="ButtonsFrame.pas">
+				<Form>frmButtons</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<None Include="ModelSupport_DataTools\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\ButtonsFrame\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\DAOTest\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\DataTools\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\QuestionABCDInputFrame\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\MainForm\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\WritingForm\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\SoundFrame\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\MainSQLUnit\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\SpeakingSQLUnit\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\ExampleFrame\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\JoanModule\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\TestClasses\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\SpeakingForm\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\ReadingForm\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\ListeningForm\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\QuestionInputFrame\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\ListeningSQLUnit\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\WritingSQLUnit\default.txvpck"/>
+			<None Include="ModelSupport_DataTools\QuestionSelectFrame\default.txvpck"/>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters/>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1042</VersionInfo>
+						<VersionInfo Name="CodePage">949</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">DataTools.dpr</Source>
+					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k150.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp150.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>True</ModelSupport>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

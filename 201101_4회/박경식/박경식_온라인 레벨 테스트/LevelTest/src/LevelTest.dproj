@@ -1,0 +1,213 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{81034A92-D6C2-45EB-8508-3C27E8C5C3EE}</ProjectGuid>
+			<ProjectVersion>12.3</ProjectVersion>
+			<MainSource>LevelTest.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<Base>True</Base>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>rtl;vcl;xmlrtl;vclactnband;vclx;VclSmp;vclimg;svnui;svn;bdertl;TeeUI;TeeDB;Tee;vcldb;dbrtl;vcldbx;vcltouch;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;tmsd2010;tmsexd2010;tmswizd2010;DSPackR;DirectX9_;Mypackage</DCC_UsePackage>
+			<UsePackages>true</UsePackages>
+			<DCC_DependencyCheckOutputName>LevelTest.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="LevelTest.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="LoginForm.pas">
+				<Form>frLogin</Form>
+			</DCCReference>
+			<DCCReference Include="GuestForm.pas">
+				<Form>frGuest</Form>
+			</DCCReference>
+			<DCCReference Include="MainForm.pas">
+				<Form>frMain</Form>
+			</DCCReference>
+			<DCCReference Include="SelectForm.pas">
+				<Form>frSelect</Form>
+			</DCCReference>
+			<DCCReference Include="ReadingForm.pas">
+				<Form>frReading</Form>
+			</DCCReference>
+			<DCCReference Include="ResultGuideForm.pas">
+				<Form>frResultGuide</Form>
+			</DCCReference>
+			<DCCReference Include="ResultListForm.pas">
+				<Form>frResultList</Form>
+			</DCCReference>
+			<DCCReference Include="ResultViewForm.pas">
+				<Form>frResultView</Form>
+			</DCCReference>
+			<DCCReference Include="ListeningForm.pas">
+				<Form>frListening</Form>
+			</DCCReference>
+			<DCCReference Include="AdminMainForm.pas">
+				<Form>frAdminMain</Form>
+			</DCCReference>
+			<DCCReference Include="EstimateForm.pas">
+				<Form>frEstimate</Form>
+			</DCCReference>
+			<DCCReference Include="ProgressForm.pas">
+				<Form>frProgress</Form>
+			</DCCReference>
+			<DCCReference Include="ResultForm.pas">
+				<Form>frResult</Form>
+			</DCCReference>
+			<DCCReference Include="BackgroundForm.pas">
+				<Form>frBackground</Form>
+			</DCCReference>
+			<DCCReference Include="LTClasses.pas"/>
+			<DCCReference Include="Global.pas"/>
+			<DCCReference Include="DAOTest.pas"/>
+			<DCCReference Include="LTUtils.pas"/>
+			<DCCReference Include="DAOGuest.pas"/>
+			<DCCReference Include="DAOMember.pas"/>
+			<DCCReference Include="LTConsts.pas"/>
+			<DCCReference Include="GuestSQLUnit.pas"/>
+			<DCCReference Include="DataAccessObjects.pas"/>
+			<DCCReference Include="Database_DM.pas">
+				<Form>dmDatabase</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ListeningFrame.pas">
+				<Form>fmListening</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReadingFrame.pas">
+				<Form>fmReading</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="NewMemberForm.pas">
+				<Form>frNewMember</Form>
+			</DCCReference>
+			<None Include="ModelSupport_LevelTest\default.txaPackage"/>
+			<None Include="ModelSupport_LevelTest\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\MainForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ListeningForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ResultViewForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\DAOGuest\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\GuestForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ResultListForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\LevelTest\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\GuestSQLUnit\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\Database_DM\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\NewMemberForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\EstimateForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\Global\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\BackgroundForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\DAOMember\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\DAOTest\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\AdminMainForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\DataAccessObjects\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ProgressForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\SelectForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\LoginForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ResultForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\LTClasses\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ReadingForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ResultGuideForm\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ListeningFrame\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\LTUtils\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\LTConsts\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\ReadingFrame\default.txvpck"/>
+			<None Include="ModelSupport_LevelTest\GuestSQLUnit\default.txaPackage"/>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters/>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1042</VersionInfo>
+						<VersionInfo Name="CodePage">949</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">LevelTest.dpr</Source>
+					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k150.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp150.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<ModelSupport>True</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

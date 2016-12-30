@@ -1,0 +1,69 @@
+
+CREATE TABLE ADJUSTMENT_INFO(
+    "open_date"     DATE       NOT NULL,
+    "total_amount"  INTEGER    NOT NULL,
+    PRIMARY KEY ("open_date")    	
+)
+;
+
+
+CREATE TABLE FOOD_INFO(
+    "f_num"       INTEGER        NOT NULL,
+    "f_name"      VARCHAR(50)    NOT NULL,
+    "f_price"     INTEGER        NOT NULL,
+    "f_image"     BLOB,
+    "f_datetime"  TIMESTAMP,
+    PRIMARY KEY ("f_num")
+)
+;
+
+CREATE TABLE ORDER_SALES(
+    "open_date"  DATE       NOT NULL,
+    "slip_num"   INTEGER    NOT NULL,
+    "table_num"  INTEGER    NOT NULL,
+    PRIMARY KEY ("slip_num"),
+    UNIQUE ("open_date")
+)
+;
+
+CREATE TABLE ORDER_INFO(
+    "open_date"  DATE       NOT NULL,
+    "slip_num"   INTEGER    NOT NULL,
+    "seq_num"    INTEGER    NOT NULL,
+    "table_num"  INTEGER    NOT NULL,
+    "f_num"      INTEGER    NOT NULL,
+    "count"      INTEGER    NOT NULL,
+    "o_time"     TIME       NOT NULL,
+    PRIMARY KEY ("slip_num"),
+    UNIQUE ("open_date", "seq_num"),
+    FOREIGN KEY ("slip_num") REFERENCES ORDER_SALES("slip_num"),
+    FOREIGN KEY ("f_num") REFERENCES FOOD_INFO("f_num")		
+)
+;
+
+
+CREATE TABLE RERV_INFO(
+    "r_num"      INTEGER        NOT NULL,
+    "r_date"     DATE           NOT NULL,
+    "r_time"     TIME           NOT NULL,
+    "r_name"     VARCHAR(20)    NOT NULL,
+    "r_phone"    VARCHAR(13)    NOT NULL,
+    "r_memo"     VARCHAR(50),
+    "r_remarks"  CHAR(5),
+    PRIMARY KEY ("r_num")
+)
+;
+
+
+CREATE TABLE SALES_INFO(
+    "slip_num"   INTEGER    NOT NULL,
+    "open_date"  DATE       NOT NULL,
+    "table_num"  INTEGER    NOT NULL,
+    "s_sum"      INTEGER    NOT NULL,
+    "s_time"     TIME       NOT NULL,
+    PRIMARY KEY ("slip_num"),
+    UNIQUE ("open_date"),
+    FOREIGN KEY ("slip_num") REFERENCES ORDER_SALES("slip_num")
+)
+;
+

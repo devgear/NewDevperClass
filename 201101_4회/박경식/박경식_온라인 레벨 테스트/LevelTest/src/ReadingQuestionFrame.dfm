@@ -1,0 +1,115 @@
+object fmReadingQuestion: TfmReadingQuestion
+  Left = 0
+  Top = 0
+  Width = 950
+  Height = 420
+  TabOrder = 0
+  object lbExample1: TLabel
+    Left = 51
+    Top = 61
+    Width = 44
+    Height = 19
+    Caption = #48372#44592'1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = lbExample1Click
+  end
+  object lbExample2: TLabel
+    Left = 51
+    Top = 110
+    Width = 44
+    Height = 19
+    Caption = #48372#44592'2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = lbExample2Click
+  end
+  object lbExample3: TLabel
+    Left = 51
+    Top = 159
+    Width = 44
+    Height = 19
+    Caption = #48372#44592'3'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = lbExample3Click
+  end
+  object lbExample4: TLabel
+    Left = 51
+    Top = 208
+    Width = 44
+    Height = 19
+    Caption = #48372#44592'4'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    OnClick = lbExample4Click
+  end
+  object lbSelect: TLabel
+    Left = 816
+    Top = 208
+    Width = 54
+    Height = 19
+    Caption = 'lbSelect'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 728
+    Top = 208
+    Width = 80
+    Height = 19
+    Caption = #49440#53469#46108' '#45813' :'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lbNumber: TLabel
+    Left = 11
+    Top = 14
+    Width = 34
+    Height = 19
+    Caption = #48264#54840
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbQuestion: TLabel
+    Left = 51
+    Top = 14
+    Width = 34
+    Height = 19
+    Caption = #47928#51228
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowFrame
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+end
