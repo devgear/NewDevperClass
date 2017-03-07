@@ -1,0 +1,12 @@
+﻿[qryKids]
+Coordinates=10,10,98,267
+
+[]
+Coordinates=72,10,110,249
+
+[SQLConnection1]
+Coordinates=159,1,97,33
+
+[DSProviderConnection1]
+Coordinates=159,53,132,33
+

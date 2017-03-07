@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1A2CA89D-B821-4CED-91C7-DFB0B358B1D4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="SERVER\Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="USER\Mobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TAXI\T_Mobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Server">
+        <MSBuild Projects="SERVER\Server.dproj"/>
+    </Target>
+    <Target Name="Server:Clean">
+        <MSBuild Projects="SERVER\Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Server:Make">
+        <MSBuild Projects="SERVER\Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Mobile">
+        <MSBuild Projects="USER\Mobile.dproj"/>
+    </Target>
+    <Target Name="Mobile:Clean">
+        <MSBuild Projects="USER\Mobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Mobile:Make">
+        <MSBuild Projects="USER\Mobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="T_Mobile">
+        <MSBuild Projects="TAXI\T_Mobile.dproj"/>
+    </Target>
+    <Target Name="T_Mobile:Clean">
+        <MSBuild Projects="TAXI\T_Mobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="T_Mobile:Make">
+        <MSBuild Projects="TAXI\T_Mobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Server;Mobile;T_Mobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Server:Clean;Mobile:Clean;T_Mobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Server:Make;Mobile:Make;T_Mobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

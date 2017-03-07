@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7924121B-FB82-42C1-8E5E-9964C81A0545}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\어린이집\Source\Manager.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Manager_Server.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Manager_Phone.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Manager">
+        <MSBuild Projects="..\어린이집\Source\Manager.dproj"/>
+    </Target>
+    <Target Name="Manager:Clean">
+        <MSBuild Projects="..\어린이집\Source\Manager.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Manager:Make">
+        <MSBuild Projects="..\어린이집\Source\Manager.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Manager_Server">
+        <MSBuild Projects="Manager_Server.dproj"/>
+    </Target>
+    <Target Name="Manager_Server:Clean">
+        <MSBuild Projects="Manager_Server.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Manager_Server:Make">
+        <MSBuild Projects="Manager_Server.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Manager_Phone">
+        <MSBuild Projects="Manager_Phone.dproj"/>
+    </Target>
+    <Target Name="Manager_Phone:Clean">
+        <MSBuild Projects="Manager_Phone.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Manager_Phone:Make">
+        <MSBuild Projects="Manager_Phone.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Manager;Manager_Server;Manager_Phone"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Manager:Clean;Manager_Server:Clean;Manager_Phone:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Manager:Make;Manager_Server:Make;Manager_Phone:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

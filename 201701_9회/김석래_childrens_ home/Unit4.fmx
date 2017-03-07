@@ -1,0 +1,188 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 507
+  ClientWidth = 412
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 412.000000000000000000
+    Size.Height = 507.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Panel1: TPanel
+      Align = Client
+      Size.Width = 412.000000000000000000
+      Size.Height = 507.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object TabControl1: TTabControl
+        Align = Client
+        Size.Width = 412.000000000000000000
+        Size.Height = 507.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = Bottom
+        Sizes = (
+          412s
+          458s
+          412s
+          458s
+          412s
+          458s)
+        object TabItem1: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 137.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabItem1'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object Button1: TButton
+            Position.X = 32.000000000000000000
+            Position.Y = 216.000000000000000000
+            TabOrder = 0
+            Text = 'Button1'
+            OnClick = Button1Click
+          end
+          object Edit1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 1
+            Text = '192.168.1.5'
+            Position.X = 168.000000000000000000
+            Position.Y = 240.000000000000000000
+            Size.Width = 145.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Edit2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 2
+            Text = '211'
+            Position.X = 168.000000000000000000
+            Position.Y = 304.000000000000000000
+          end
+        end
+        object TabItem2: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 137.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabItem2'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object ListView1: TListView
+            ItemAppearanceClassName = 'TImageListItemBottomDetailRightButtonAppearance'
+            ItemEditAppearanceClassName = 'TImageListItemBottomDetailRightButtonShowCheckAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            ItemIndex = 0
+            Align = Client
+            Size.Width = 412.000000000000000000
+            Size.Height = 458.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+        end
+        object TabItem3: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 138.000000000000000000
+          Size.Height = 49.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'TabItem3'
+          object ListView2: TListView
+            ItemAppearanceClassName = 'TListItemAppearance'
+            ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            ItemIndex = 0
+            Align = Client
+            Size.Width = 412.000000000000000000
+            Size.Height = 458.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule2.qryKids
+    ScopeMappings = <>
+    Left = 40
+    Top = 400
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 348
+    Top = 429
+    object LinkPropertyToFieldBitmap: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'KIDS_IMAGE'
+      ComponentProperty = 'Bitmap'
+    end
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'KIDS_NAME'
+      FillExpressions = <
+        item
+          SourceMemberName = 'KIDS_IMAGE'
+          ControlMemberName = 'Bitmap'
+        end
+        item
+          SourceMemberName = 'KIDS_AGE'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'KIDS_NAME'
+      Control = ListView1
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField3: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'PARENTS_NAME'
+      Control = ListView2
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DataModule2.qryParents
+    ScopeMappings = <>
+    Left = 80
+    Top = 400
+  end
+end

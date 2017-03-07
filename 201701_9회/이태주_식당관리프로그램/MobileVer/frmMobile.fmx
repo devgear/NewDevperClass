@@ -1,0 +1,1285 @@
+object frm_mobile: Tfrm_mobile
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 558
+  ClientWidth = 360
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 360.000000000000000000
+    Size.Height = 558.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 360.000000000000000000
+      Size.Height = 558.000000000000000000
+      Size.PlatformDefault = False
+      TabHeight = 49.000000000000000000
+      TabIndex = 4
+      TabOrder = 0
+      TabStop = False
+      TabPosition = None
+      Sizes = (
+        360s
+        558s
+        360s
+        558s
+        360s
+        558s
+        360s
+        558s
+        360s
+        558s)
+      object tabMain: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tabMain'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object lytHall: TLayout
+          Align = Top
+          Size.Width = 360.000000000000000000
+          Size.Height = 279.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object btnHall: TButton
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 360.000000000000000000
+            Size.Height = 279.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #54848#50857
+            TextSettings.Font.Size = 110.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claSkyblue
+            OnClick = btnHallClick
+          end
+        end
+        object lytKitchen: TLayout
+          Align = Client
+          Size.Width = 360.000000000000000000
+          Size.Height = 279.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object btnKitchen: TButton
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 360.000000000000000000
+            Size.Height = 279.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #51452#48169#50857
+            TextSettings.Font.Size = 110.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claSkyblue
+            OnClick = btnKitchenClick
+          end
+        end
+      end
+      object tabTable: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tabTable'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object lytTable: TLayout
+          Align = Client
+          Size.Width = 360.000000000000000000
+          Size.Height = 558.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object btnBack1: TButton
+            Position.X = 272.000000000000000000
+            Position.Y = 504.000000000000000000
+            TabOrder = 0
+            Text = #46244#47196
+            OnClick = btnBackClick
+          end
+        end
+        object Table6: TRectangle
+          Tag = 6
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 280.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable6: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '6'
+          end
+        end
+        object edtKindName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = []
+          TabOrder = 0
+          Position.X = 65.000000000000000000
+          Position.Y = 224.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtPrice: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Anchors = []
+          TabOrder = 1
+          Position.X = 65.000000000000000000
+          Position.Y = 272.000000000000000000
+          Size.Width = 104.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object Table1: TRectangle
+          Tag = 1
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable1: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '1'
+          end
+        end
+        object Table10: TRectangle
+          Tag = 10
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 502.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable10: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '10'
+          end
+        end
+        object Table9: TRectangle
+          Tag = 9
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 447.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable9: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '9'
+          end
+        end
+        object Table5: TRectangle
+          Tag = 5
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 225.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable5: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '5'
+          end
+        end
+        object Table4: TRectangle
+          Tag = 4
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 169.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable4: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '4'
+          end
+        end
+        object Table3: TRectangle
+          Tag = 3
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 113.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable3: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '3'
+          end
+        end
+        object Table2: TRectangle
+          Tag = 2
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 58.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable2: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '2'
+          end
+        end
+        object Table20: TRectangle
+          Tag = 20
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 502.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable20: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '20'
+          end
+        end
+        object Table13: TRectangle
+          Tag = 13
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 113.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable13: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '13'
+          end
+        end
+        object Table12: TRectangle
+          Tag = 12
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 58.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable12: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '12'
+          end
+        end
+        object Table24: TRectangle
+          Tag = 24
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 242.000000000000000000
+          Position.Y = 169.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable24: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '24'
+          end
+        end
+        object Table11: TRectangle
+          Tag = 11
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable11: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '11'
+          end
+        end
+        object Table14: TRectangle
+          Tag = 14
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 169.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable14: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '14'
+          end
+        end
+        object Table15: TRectangle
+          Tag = 15
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 225.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable15: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '15'
+          end
+        end
+        object Table8: TRectangle
+          Tag = 8
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 392.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable8: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '8'
+          end
+        end
+        object Table19: TRectangle
+          Tag = 19
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 447.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable19: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '19'
+          end
+        end
+        object Table21: TRectangle
+          Tag = 21
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 242.000000000000000000
+          Position.Y = 2.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable21: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '21'
+          end
+        end
+        object Table16: TRectangle
+          Tag = 16
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 280.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable16: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '16'
+          end
+        end
+        object Table22: TRectangle
+          Tag = 22
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 242.000000000000000000
+          Position.Y = 58.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable22: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '22'
+          end
+        end
+        object Table23: TRectangle
+          Tag = 23
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 242.000000000000000000
+          Position.Y = 113.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable23: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '23'
+          end
+        end
+        object Table17: TRectangle
+          Tag = 17
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 336.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable17: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '17'
+          end
+        end
+        object Table18: TRectangle
+          Tag = 8
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 123.000000000000000000
+          Position.Y = 392.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable18: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '18'
+          end
+        end
+        object Table7: TRectangle
+          Tag = 7
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 4.000000000000000000
+          Position.Y = 336.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lblTable7: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '7'
+          end
+        end
+        object Table25: TRectangle
+          Tag = 24
+          Anchors = []
+          Fill.Color = claPowderblue
+          Position.X = 242.000000000000000000
+          Position.Y = 225.000000000000000000
+          Size.Width = 116.000000000000000000
+          Size.Height = 55.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = Table1Click
+          object lbl25: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 116.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '25'
+          end
+        end
+      end
+      object tabOrderlist: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tabOrderlist'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object ToolBar1: TToolBar
+          Size.Width = 360.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object lblTable: TLabel
+            Align = Center
+            StyledSettings = [Family, FontColor]
+            Size.Width = 121.000000000000000000
+            Size.Height = 52.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 40.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+          end
+          object edtTableNum: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 0
+            Position.X = 184.000000000000000000
+            Position.Y = 8.000000000000000000
+            Visible = False
+          end
+        end
+        object stgOrderList: TStringGrid
+          Align = Top
+          CanFocus = True
+          ClipChildren = True
+          Position.Y = 48.000000000000000000
+          Size.Width = 360.000000000000000000
+          Size.Height = 240.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          StyledSettings = [Family, Size, FontColor]
+          TabOrder = 1
+          RowCount = 0
+          Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+          Viewport.Width = 360.000000000000000000
+          Viewport.Height = 208.000000000000000000
+        end
+        object btnStue: TButton
+          StyledSettings = [Family, FontColor]
+          Position.X = 8.000000000000000000
+          Position.Y = 300.000000000000000000
+          Size.Width = 111.000000000000000000
+          Size.Height = 115.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 7
+          Text = #52236#44060
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TintColor = claAliceblue
+          OnClick = btnStueClick
+        end
+        object btnMeat: TButton
+          StyledSettings = [Family, FontColor]
+          Position.X = 126.000000000000000000
+          Position.Y = 300.000000000000000000
+          Size.Width = 111.000000000000000000
+          Size.Height = 115.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          Text = #44256#44592
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TintColor = claAliceblue
+          OnClick = btnStueClick
+        end
+        object btnDrink: TButton
+          StyledSettings = [Family, FontColor]
+          Position.X = 8.000000000000000000
+          Position.Y = 423.000000000000000000
+          Size.Width = 111.000000000000000000
+          Size.Height = 115.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 6
+          Text = #51452#47448
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TintColor = claAliceblue
+          OnClick = btnStueClick
+        end
+        object btnEtc: TButton
+          StyledSettings = [Family, FontColor]
+          Position.X = 126.000000000000000000
+          Position.Y = 423.000000000000000000
+          Size.Width = 111.000000000000000000
+          Size.Height = 115.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          Text = #44592#53440
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TintColor = claAliceblue
+          OnClick = btnStueClick
+        end
+        object btnok: TButton
+          StyledSettings = [Family, FontColor]
+          Position.X = 242.000000000000000000
+          Position.Y = 300.000000000000000000
+          Size.Width = 111.000000000000000000
+          Size.Height = 115.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          Text = #54869#51064
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TintColor = claAliceblue
+          OnClick = btnokClick
+        end
+        object btncancel: TButton
+          StyledSettings = [Family, FontColor]
+          Position.X = 242.000000000000000000
+          Position.Y = 423.000000000000000000
+          Size.Width = 111.000000000000000000
+          Size.Height = 115.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = #52712#49548
+          TextSettings.Font.Size = 50.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TintColor = claAliceblue
+          OnClick = btncancelClick
+        end
+        object edtKeynum: TEdit
+          Tag = 1
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 8
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Visible = False
+        end
+      end
+      object tabOrder: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tabOrder'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object Layout3: TLayout
+          Align = Client
+          Anchors = []
+          Size.Width = 360.000000000000000000
+          Size.Height = 558.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object btnCal0: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 1.000000000000000000
+            Position.Y = 478.825561523437500000
+            Size.Width = 181.000000000000000000
+            Size.Height = 61.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = '0'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal1: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 1.000000000000000000
+            Position.Y = 324.260803222656300000
+            Size.Width = 92.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = '1'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal2: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 90.000000000000000000
+            Position.Y = 324.260803222656300000
+            Size.Width = 92.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 7
+            Text = '2'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal3: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 180.000000000000000000
+            Position.Y = 324.260803222656300000
+            Size.Width = 92.000000000000000000
+            Size.Height = 55.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 10
+            Text = '3'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal4: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 1.000000000000000000
+            Position.Y = 378.447845458984400000
+            Size.Width = 92.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            Text = '4'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal5: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 90.000000000000000000
+            Position.Y = 378.447845458984400000
+            Size.Width = 92.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 8
+            Text = '5'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal6: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 180.000000000000000000
+            Position.Y = 378.447845458984400000
+            Size.Width = 92.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 13
+            Text = '6'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal7: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 1.000000000000000000
+            Position.Y = 428.627685546875000000
+            Size.Width = 92.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            Text = '7'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal8: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 90.000000000000000000
+            Position.Y = 428.627685546875000000
+            Size.Width = 92.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 9
+            Text = '8'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnCal9: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 180.000000000000000000
+            Position.Y = 428.627685546875000000
+            Size.Width = 92.000000000000000000
+            Size.Height = 51.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 12
+            Text = '9'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnCal1Click
+          end
+          object btnOrderOk: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 271.000000000000000000
+            Position.Y = 324.350708007812500000
+            Size.Width = 85.000000000000000000
+            Size.Height = 105.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 18
+            Text = #54869#51064
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnOrderOkClick
+          end
+          object btnPeopleCancel: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 180.000000000000000000
+            Position.Y = 478.825561523437500000
+            Size.Width = 92.000000000000000000
+            Size.Height = 61.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 16
+            Text = 'C'
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnPeopleCancelClick
+          end
+          object edtMenu: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 15
+            ReadOnly = True
+            TextSettings.Font.Size = 25.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Trailing
+            Position.X = 64.000000000000000000
+            Position.Y = 291.000000000000000000
+            Size.Width = 137.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, FontColor]
+          end
+          object edtPeople: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            TabOrder = 14
+            ReadOnly = True
+            Text = '0'
+            TextSettings.Font.Size = 25.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Position.X = 197.000000000000000000
+            Position.Y = 291.000000000000000000
+            Size.Width = 97.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, FontColor]
+          end
+          object stgKind: TStringGrid
+            Align = Top
+            CanFocus = True
+            ClipChildren = True
+            Position.Y = 48.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 240.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            RowCount = 0
+            Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+            OnSelectCell = stgKindSelectCell
+            Viewport.Width = 360.000000000000000000
+            Viewport.Height = 208.000000000000000000
+          end
+          object ToolBar2: TToolBar
+            Size.Width = 360.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label1: TLabel
+              Align = Center
+              StyledSettings = [Family, FontColor]
+              Size.Width = 121.000000000000000000
+              Size.Height = 52.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 40.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+            end
+          end
+          object btnOrderCancel: TButton
+            Anchors = []
+            StyledSettings = [Family, FontColor]
+            Position.X = 271.000000000000000000
+            Position.Y = 428.735595703125000000
+            Size.Width = 85.000000000000000000
+            Size.Height = 111.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 17
+            Text = #52712#49548
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TintColor = claAliceblue
+            OnClick = btnOrderCancelClick
+          end
+        end
+      end
+      object tabKitchen: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tabKitchen'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object stgKitchen: TStringGrid
+          Align = Client
+          CanFocus = True
+          ClipChildren = True
+          Size.Width = 360.000000000000000000
+          Size.Height = 510.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          RowHeight = 100.000000000000000000
+          RowCount = 0
+          Options = [ColumnResize, ColumnMove, ColLines, RowLines, Tabs, Header, HeaderClick, AutoDisplacement]
+          OnSelectCell = stgKitchenSelectCell
+          Viewport.Width = 360.000000000000000000
+          Viewport.Height = 478.000000000000000000
+        end
+        object edtKitchen: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          Position.X = 64.000000000000000000
+          Visible = False
+        end
+        object ToolBar3: TToolBar
+          Size.Width = 360.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object btnBack: TButton
+            StyledSettings = [Family, FontColor]
+            Position.X = 272.000000000000000000
+            TabOrder = 0
+            Text = #46244#47196
+            TextSettings.Font.Size = 30.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            OnClick = btnBackClick
+          end
+        end
+      end
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 300
+    Top = 205
+  end
+  object edtHostname: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    StyleLookup = 'edtHostnameStyle1'
+    TabOrder = 6
+    Text = '192.168.1.12'
+    Position.X = 80.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 193.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+  end
+  object edtPort: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    Text = '211'
+    Position.X = 80.000000000000000000
+    Position.Y = 112.000000000000000000
+    Size.Width = 193.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+  end
+  object bsTmpOrderlist: TBindSourceDB
+    DataSet = DataModule1.cdsTmpOrderlist
+    ScopeMappings = <>
+    Left = 296
+    Top = 8
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 300
+    Top = 157
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = bsTmpOrderlist
+      GridControl = stgOrderList
+      Columns = <
+        item
+          MemberName = 'TABLENUM'
+          Width = 90
+        end
+        item
+          MemberName = 'MENU'
+          Width = 120
+        end
+        item
+          MemberName = 'PEOPLE'
+          Width = 50
+        end
+        item
+          MemberName = 'TOTALPRICE'
+          Width = 100
+        end>
+    end
+    object LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = bsKitchen
+      GridControl = stgKitchen
+      Columns = <
+        item
+          MemberName = 'KITCHEN_SEQ'
+        end
+        item
+          MemberName = 'KIND'
+        end
+        item
+          MemberName = 'MENU'
+          Width = 150
+        end
+        item
+          MemberName = 'PEOPLE'
+        end>
+    end
+    object LinkGridToDataSourcebsFoodKind: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = bsFoodKind
+      GridControl = stgKind
+      Columns = <
+        item
+          MemberName = 'KIND'
+        end
+        item
+          MemberName = 'MENU'
+          Width = 150
+        end
+        item
+          MemberName = 'PRICE'
+          Width = 80
+        end>
+    end
+  end
+  object bsKitchen: TBindSourceDB
+    DataSource.OnDataChange = bsKitchenSubDataSourceDataChange
+    DataSet = DataModule1.cdsKitchen
+    ScopeMappings = <>
+    Left = 296
+    Top = 53
+  end
+  object bsFoodKind: TBindSourceDB
+    DataSet = DataModule1.cdsKind
+    ScopeMappings = <>
+    Left = 296
+    Top = 112
+  end
+  object Timer2: TTimer
+    Interval = 3000
+    OnTimer = Timer2Timer
+    Left = 308
+    Top = 271
+  end
+end
