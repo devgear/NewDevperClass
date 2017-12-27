@@ -1,0 +1,80 @@
+inherited MainForm_iPhone55in: TMainForm_iPhone55in
+  ClientHeight = 716
+  ClientWidth = 414
+  DesignerMasterStyle = 3
+  inherited LayoutMAIN: TLayout
+    Size.Width = 414.000000000000000000
+    Size.Height = 716.000000000000000000
+    inherited MainPanel: TPanel
+      Size.Width = 414.000000000000000000
+      Size.Height = 716.000000000000000000
+      inherited Rectangle3: TRectangle
+        Size.Width = 414.000000000000000000
+        Size.Height = 716.000000000000000000
+      end
+      inherited Circle3: TCircle
+        Position.X = 118.000000000000000000
+      end
+      inherited toptext: TText
+        Position.X = 39.000000000000000000
+        Position.Y = 64.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited LayoutID: TLayout
+        inherited Layout2: TLayout
+          Size.Width = 81.000000000000000000
+          inherited RoundRect1: TRoundRect
+            inherited Text3: TText
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+          end
+        end
+        inherited Layout4: TLayout
+          Position.X = 112.000000000000000000
+          inherited RoundRect4: TRoundRect
+            Size.Width = 232.000000000000000000
+            inherited EditID: TEdit
+              Size.Width = 205.000000000000000000
+              Size.Height = 30.000000000000000000
+            end
+          end
+        end
+      end
+      inherited LayoutPW: TLayout
+        inherited Layout9: TLayout
+          inherited RoundRect12: TRoundRect
+            inherited text10: TText
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+          end
+        end
+        inherited Layout10: TLayout
+          Position.X = 112.000000000000000000
+          inherited RoundRect13: TRoundRect
+            Size.Width = 239.000000000000000000
+            inherited EditPW: TEdit
+              Size.Width = 189.000000000000000000
+              Size.Height = 30.000000000000000000
+            end
+          end
+        end
+      end
+    end
+    inherited LayoutLogin: TLayout
+      Position.X = 32.000000000000000000
+      inherited RoundRect2: TRoundRect
+        inherited Text1: TText
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+    end
+    inherited LayoutINSERT: TLayout
+      Position.X = 200.000000000000000000
+      inherited RoundRect3: TRoundRect
+        inherited Text2: TText
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+    end
+  end
+end

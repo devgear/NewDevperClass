@@ -1,0 +1,57 @@
+inherited ReserveForm_LgXhdpiPh: TReserveForm_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited MainLayout: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 647.000000000000000000
+    inherited MainPanel: TPanel
+      Size.Width = 450.000000000000000000
+      Size.Height = 647.000000000000000000
+      inherited Rectangle2: TRectangle
+        Size.Width = 450.000000000000000000
+        Size.Height = 647.000000000000000000
+      end
+      inherited LibMenu2: TRectangle
+        Size.Width = 378.000000000000000000
+        inherited Text4: TText
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited PickDate: TDateEdit
+          Size.Height = 32.000000000000000000
+        end
+      end
+      inherited DESK1: TRectangle
+        Position.X = 40.000000000000000000
+      end
+      inherited RentBox: TRectangle
+        Size.Width = 378.000000000000000000
+        inherited Button25: TButton
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited txtSNum: TText
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited txtTime: TText
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited STimeCombo: TComboBox
+          Size.Height = 32.000000000000000000
+        end
+        inherited ETimeCombo: TComboBox
+          Size.Height = 32.000000000000000000
+        end
+      end
+    end
+  end
+  inherited ToolBar6: TToolBar
+    Position.Y = 647.000000000000000000
+    Size.Width = 450.000000000000000000
+    inherited Rectangle1: TRectangle
+      Size.Width = 450.000000000000000000
+      inherited Text14: TText
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end

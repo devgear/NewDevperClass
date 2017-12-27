@@ -1,0 +1,315 @@
+object FindForm: TFindForm
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 598
+  ClientWidth = 478
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object LayoutFindLIB: TLayout
+    Align = Client
+    Size.Width = 478.000000000000000000
+    Size.Height = 550.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object PN_FindLib: TPanel
+      Align = Client
+      Size.Width = 478.000000000000000000
+      Size.Height = 550.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object BackGround: TRectangle
+        Align = Client
+        Fill.Color = claTomato
+        Size.Width = 478.000000000000000000
+        Size.Height = 550.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claNull
+      end
+      object Text3: TText
+        Anchors = [akLeft, akRight]
+        AutoSize = True
+        Position.X = 104.000000000000000000
+        Position.Y = 18.000000000000000000
+        Size.Width = 250.204421997070300000
+        Size.Height = 37.242187500000000000
+        Size.PlatformDefault = False
+        Text = #49436#50872#49884' '#46020#49436#44288' '#52286#44592
+        TextSettings.Font.Family = 'Trebuchet MS'
+        TextSettings.Font.Size = 28.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+      end
+      object Inform: TRectangle
+        Anchors = [akLeft, akTop, akRight]
+        Fill.Color = claWhite
+        Position.X = 48.000000000000000000
+        Position.Y = 208.000000000000000000
+        Size.Width = 353.000000000000000000
+        Size.Height = 218.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claWhite
+        XRadius = 30.000000000000000000
+        YRadius = 30.000000000000000000
+        object Text5: TText
+          AutoSize = True
+          Position.X = 56.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 86.666664123535160000
+          Size.Height = 26.601562500000000000
+          Size.PlatformDefault = False
+          Text = #44060#51109#49884#44036
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claTomato
+        end
+        object EditLibName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 1
+          ReadOnly = True
+          Text = #44060#54252#46020#49436#44288
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          Position.X = 120.000000000000000000
+          Position.Y = 16.000000000000000000
+          Size.Width = 121.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object EditSTIME: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 2
+          ReadOnly = True
+          Text = #50724#51204' 9:00:00'
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          Position.X = 160.000000000000000000
+          Position.Y = 73.000000000000000000
+          Size.Width = 145.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object EditETIME: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 3
+          ReadOnly = True
+          Text = #50724#54980' 7:00:00'
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          Position.X = 160.000000000000000000
+          Position.Y = 112.000000000000000000
+          Size.Width = 137.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+        object Text1: TText
+          AutoSize = True
+          Position.X = 56.000000000000000000
+          Position.Y = 112.000000000000000000
+          Size.Width = 86.666664123535160000
+          Size.Height = 26.601562500000000000
+          Size.PlatformDefault = False
+          Text = #54168#51109#49884#44036
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claTomato
+        end
+        object Text2: TText
+          AutoSize = True
+          Position.X = 72.000000000000000000
+          Position.Y = 152.000000000000000000
+          Size.Width = 66.666664123535160000
+          Size.Height = 26.601562500000000000
+          Size.PlatformDefault = False
+          Text = #55092#44288#51068
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claTomato
+        end
+        object EditCLOSE: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 6
+          ReadOnly = True
+          Text = '2017-06-16'
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          Position.X = 160.000000000000000000
+          Position.Y = 152.000000000000000000
+          Size.Width = 144.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Style, FontColor]
+        end
+      end
+      object LibMenu: TRectangle
+        Anchors = [akLeft, akTop, akRight]
+        Fill.Color = claWhite
+        Position.X = 56.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 353.000000000000000000
+        Size.Height = 66.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claWhite
+        XRadius = 30.000000000000000000
+        YRadius = 30.000000000000000000
+        object LibAddressCombo: TComboBox
+          Items.Strings = (
+            #44053#45224#44396
+            #46041#45824#47928#44396
+            #49457#46041#44396
+            #49569#54028#44396
+            #51473#44396)
+          ItemIndex = 0
+          Placement = Center
+          Position.X = 48.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'comboboxstyle'
+          TabOrder = 0
+        end
+        object LibNameCombo: TComboBox
+          Items.Strings = (
+            #44060#54252#46020#49436#44288
+            #44053#45224#46020#49436#44288)
+          ItemIndex = 0
+          Placement = Center
+          Position.X = 174.000000000000000000
+          Position.Y = 14.000000000000000000
+          Size.Width = 150.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'comboboxstyle'
+          TabOrder = 1
+        end
+      end
+      object Button1: TButton
+        Position.X = 184.000000000000000000
+        Position.Y = 464.000000000000000000
+        Size.Width = 105.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toolbutton'
+        TabOrder = 0
+        Text = #50696#50557#54616#44592
+        OnClick = Button1Click
+      end
+    end
+  end
+  object ToolBar6: TToolBar
+    Align = Bottom
+    Position.Y = 550.000000000000000000
+    Size.Width = 478.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    TintColor = claWhite
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 478.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      object Text14: TText
+        Align = Center
+        AutoSize = True
+        Size.Width = 334.460937500000000000
+        Size.Height = 31.921875000000000000
+        Size.PlatformDefault = False
+        Text = #49436#50872#49884' '#46020#49436#44288' '#51340#49437#50696#50557#49884#49828#53596
+        TextSettings.Font.Family = 'Trebuchet MS'
+        TextSettings.Font.Size = 24.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claTomato
+      end
+      object masterbutton: TButton
+        Align = FitLeft
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'replytoolbuttonbordered'
+        TabOrder = 1
+        Text = 'masterbutton'
+        OnClick = masterbuttonClick
+      end
+    end
+  end
+  object LibSource: TDataSource
+    DataSet = DM.Cl_qryLibAddress
+    Left = 32
+    Top = 64
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 24
+    Top = 472
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'LIBADDRESS'
+      Control = LibAddressCombo
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'LIBNAME'
+      Control = LibNameCombo
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'LIBNAME'
+      Control = EditLibName
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'LIBOPEN'
+      Control = EditSTIME
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'LIBCLOSE'
+      Control = EditETIME
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      FieldName = 'LIBHOLIDAY'
+      Control = EditCLOSE
+      Track = False
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DM.Cl_qryLibAddress
+    ScopeMappings = <>
+    Left = 96
+    Top = 472
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSource = DM.LibNameSource
+    ScopeMappings = <>
+    Left = 176
+    Top = 496
+  end
+end

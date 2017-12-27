@@ -1,0 +1,69 @@
+inherited FindForm_LgXhdpiPh: TFindForm_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited LayoutFindLIB: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 647.000000000000000000
+    inherited PN_FindLib: TPanel
+      Size.Width = 450.000000000000000000
+      Size.Height = 647.000000000000000000
+      inherited BackGround: TRectangle
+        Size.Width = 450.000000000000000000
+        Size.Height = 647.000000000000000000
+      end
+      inherited Text3: TText
+        Position.X = 88.000000000000000000
+        Position.Y = 22.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Inform: TRectangle
+        Align = Center
+        Size.Width = 307.000000000000000000
+        inherited Text5: TText
+          Position.X = 32.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited EditLibName: TEdit
+          Position.X = 96.000000000000000000
+        end
+        inherited EditSTIME: TEdit
+          Position.X = 136.000000000000000000
+        end
+        inherited EditETIME: TEdit
+          Position.X = 136.000000000000000000
+        end
+        inherited Text1: TText
+          Position.X = 32.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited Text2: TText
+          Position.X = 48.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+        inherited EditCLOSE: TEdit
+          Position.X = 136.000000000000000000
+        end
+      end
+      inherited LibMenu: TRectangle
+        Size.Width = 305.000000000000000000
+        inherited LibAddressCombo: TComboBox
+          Position.X = 16.000000000000000000
+        end
+        inherited LibNameCombo: TComboBox
+          Position.X = 126.000000000000000000
+        end
+      end
+    end
+  end
+  inherited ToolBar6: TToolBar
+    Position.Y = 647.000000000000000000
+    Size.Width = 450.000000000000000000
+    inherited Rectangle1: TRectangle
+      Size.Width = 450.000000000000000000
+      inherited Text14: TText
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end

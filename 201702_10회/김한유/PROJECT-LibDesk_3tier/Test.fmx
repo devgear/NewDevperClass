@@ -1,0 +1,97 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Form6'
+  ClientHeight = 654
+  ClientWidth = 468
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object DSProviderConnection1: TDSProviderConnection
+    ServerClassName = 'TServerMethods1'
+    Connected = True
+    SQLConnection = SQLConnection1
+    Left = 168
+    Top = 16
+  end
+  object ClientDataSet1: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'DataSetProvider1'
+    RemoteServer = DSProviderConnection1
+    Left = 280
+    Top = 16
+    object ClientDataSet1USER_SEQ: TIntegerField
+      FieldName = 'USER_SEQ'
+      Origin = 'USER_SEQ'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object ClientDataSet1USER_NAME: TWideStringField
+      FieldName = 'USER_NAME'
+      Origin = 'USER_NAME'
+      Required = True
+      Size = 120
+    end
+    object ClientDataSet1USER_ID: TStringField
+      FieldName = 'USER_ID'
+      Origin = 'USER_ID'
+      Size = 15
+    end
+    object ClientDataSet1USER_PW: TStringField
+      FieldName = 'USER_PW'
+      Origin = 'USER_PW'
+      Size = 15
+    end
+    object ClientDataSet1USER_PHONE: TStringField
+      FieldName = 'USER_PHONE'
+      Origin = 'USER_PHONE'
+      Size = 15
+    end
+    object ClientDataSet1USER_MAIL: TWideStringField
+      FieldName = 'USER_MAIL'
+      Origin = 'USER_MAIL'
+      Size = 1020
+    end
+    object ClientDataSet1USER_OUT_YN: TStringField
+      FieldName = 'USER_OUT_YN'
+      Origin = 'USER_OUT_YN'
+      FixedChar = True
+      Size = 1
+    end
+  end
+  object SQLConnection1: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'DriverUnit=Data.DBXDataSnap'
+      'DatasnapContext=datasnap/'
+      
+        'DriverAssemblyLoader=Borland.Data.TDBXClientDriverLoader,Borland' +
+        '.Data.DbxClientDriver,Version=24.0.0.0,Culture=neutral,PublicKey' +
+        'Token=91d62ebb5b0d1b1b'
+      'DriverName=DataSnap'
+      'HostName=localhost'
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'Filters={}')
+    Connected = True
+    Left = 48
+    Top = 16
+    UniqueId = '{0F4BE233-086A-45D0-B7F1-E28FE5E53B72}'
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = ClientDataSet1
+    ScopeMappings = <>
+    Left = 48
+    Top = 168
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 44
+    Top = 109
+  end
+end

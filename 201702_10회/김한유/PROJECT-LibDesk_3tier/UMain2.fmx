@@ -1,0 +1,281 @@
+object MainForm2: TMainForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 626
+  ClientWidth = 452
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object LayoutMAIN: TLayout
+    Align = Client
+    Size.Width = 452.000000000000000000
+    Size.Height = 626.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object MainPanel: TPanel
+      Align = Client
+      Size.Width = 452.000000000000000000
+      Size.Height = 626.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Rectangle3: TRectangle
+        Align = Client
+        Fill.Color = claDeepskyblue
+        Size.Width = 452.000000000000000000
+        Size.Height = 626.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claNull
+      end
+      object toptext: TText
+        AutoSize = True
+        Position.X = 54.000000000000000000
+        Position.Y = 48.000000000000000000
+        Size.Width = 334.460937500000000000
+        Size.Height = 31.921875000000000000
+        Size.PlatformDefault = False
+        Text = #49436#50872#49884' '#46020#49436#44288' '#51340#49437#50696#50557#49884#49828#53596
+        TextSettings.Font.Family = 'Trebuchet MS'
+        TextSettings.Font.Size = 24.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+      end
+      object Layout2: TLayout
+        Anchors = [akLeft, akRight]
+        Position.X = 24.000000000000000000
+        Position.Y = 118.000000000000000000
+        Size.Width = 424.000000000000000000
+        Size.Height = 57.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        object RoundRect1: TRoundRect
+          Align = Center
+          Fill.Color = claDeepskyblue
+          Size.Width = 349.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claWhite
+          Stroke.Thickness = 3.000000000000000000
+          object Text3: TText
+            AutoSize = True
+            Position.X = 190.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 135.230468750000000000
+            Size.Height = 31.921875000000000000
+            Size.PlatformDefault = False
+            Text = #45784#51032' '#54168#51060#51648
+            TextSettings.Font.Family = 'Trebuchet MS'
+            TextSettings.Font.Size = 24.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claWhite
+            object Edit_MYID: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              TabOrder = 0
+              TextSettings.Font.Family = 'Trebuchet MS'
+              TextSettings.Font.Size = 20.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.HorzAlign = Center
+              Position.X = -152.000000000000000000
+              Size.Width = 121.000000000000000000
+              Size.Height = 32.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [FontColor]
+            end
+          end
+        end
+      end
+      object Layout1: TLayout
+        Position.X = 64.000000000000000000
+        Position.Y = 232.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 113.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        OnClick = FindLibClick
+        object Rectangle4: TRectangle
+          Fill.Color = claWhite
+          Size.Width = 121.000000000000000000
+          Size.Height = 105.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claWhite
+          object Rectangle5: TRectangle
+            Align = Center
+            Fill.Color = claDeepskyblue
+            Size.Width = 113.000000000000000000
+            Size.Height = 99.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claDeepskyblue
+            OnClick = FindLibClick
+            object Label2: TLabel
+              Align = Center
+              AutoSize = True
+              StyledSettings = []
+              Size.Width = 76.000000000000000000
+              Size.Height = 67.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Tahoma'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = #46020#49436#44288#52286#44592
+              TabOrder = 0
+              OnClick = FindLibClick
+            end
+          end
+        end
+      end
+      object Layout3: TLayout
+        Position.X = 224.000000000000000000
+        Position.Y = 232.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 113.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        OnClick = Mypageclick
+        object Rectangle6: TRectangle
+          Fill.Color = claWhite
+          Size.Width = 121.000000000000000000
+          Size.Height = 105.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claWhite
+          object Rectangle7: TRectangle
+            Align = Center
+            Fill.Color = claDeepskyblue
+            Size.Width = 113.000000000000000000
+            Size.Height = 99.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claDeepskyblue
+            OnClick = Mypageclick
+            object Label3: TLabel
+              Align = Center
+              AutoSize = True
+              StyledSettings = []
+              Size.Width = 76.000000000000000000
+              Size.Height = 67.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Tahoma'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = #45208#51032'  '#50696#50557
+              TabOrder = 0
+              OnClick = Mypageclick
+            end
+          end
+        end
+      end
+      object Layout4: TLayout
+        Position.X = 224.000000000000000000
+        Position.Y = 360.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 113.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object Rectangle8: TRectangle
+          Fill.Color = claWhite
+          Size.Width = 121.000000000000000000
+          Size.Height = 105.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claWhite
+          object Rectangle9: TRectangle
+            Align = Center
+            Fill.Color = claDeepskyblue
+            Size.Width = 113.000000000000000000
+            Size.Height = 99.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claDeepskyblue
+            object Label4: TLabel
+              Align = Center
+              AutoSize = True
+              StyledSettings = []
+              Size.Width = 88.000000000000000000
+              Size.Height = 67.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Family = 'Tahoma'
+              TextSettings.Font.Size = 25.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = #45236#44172' '#50728' '#47700#49884#51648
+              TabOrder = 0
+            end
+          end
+        end
+      end
+    end
+    object LayoutLogin: TLayout
+      Position.X = 136.000000000000000000
+      Position.Y = 536.000000000000000000
+      Size.Width = 145.000000000000000000
+      Size.Height = 57.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnClick = close
+      object RoundRect2: TRoundRect
+        Align = Center
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Fill.Color = claWhite
+        Size.Width = 135.000000000000000000
+        Size.Height = 46.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claNull
+        OnClick = close
+        object Text1: TText
+          Align = Center
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          AutoSize = True
+          Size.Width = 46.666667938232420000
+          Size.Height = 26.601562500000000000
+          Size.PlatformDefault = False
+          Text = #45803#44592
+          TextSettings.Font.Family = 'Trebuchet MS'
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claDeepskyblue
+          OnClick = close
+        end
+      end
+    end
+  end
+  object LY_Menu1: TLayout
+    Position.X = 64.000000000000000000
+    Position.Y = 360.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    OnClick = MSGClick
+    object Rectangle1: TRectangle
+      Fill.Color = claWhite
+      Size.Width = 121.000000000000000000
+      Size.Height = 105.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claWhite
+      object Rectangle2: TRectangle
+        Align = Center
+        Fill.Color = claDeepskyblue
+        Size.Width = 113.000000000000000000
+        Size.Height = 99.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claDeepskyblue
+        OnClick = MSGClick
+        object Label1: TLabel
+          Align = Center
+          AutoSize = True
+          StyledSettings = []
+          Size.Width = 103.000000000000000000
+          Size.Height = 67.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Family = 'Tahoma'
+          TextSettings.Font.Size = 25.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          Text = #49324#49436#50640#44172' '#54620#47560#46356
+          TabOrder = 0
+          OnClick = MSGClick
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,107 @@
+inherited MypageForm_LgXhdpiPh: TMypageForm_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited Layout3: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 647.000000000000000000
+    inherited Panel4: TPanel
+      Size.Width = 450.000000000000000000
+      Size.Height = 647.000000000000000000
+      inherited Rectangle3: TRectangle
+        Size.Width = 450.000000000000000000
+        Size.Height = 647.000000000000000000
+      end
+      inherited Text15: TText
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited Circle3: TCircle
+        inherited Text17: TText
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+        end
+      end
+      inherited LayoutID: TLayout
+        Size.Width = 384.000000000000000000
+        inherited RoundRect15: TRoundRect
+          Size.Width = 216.000000000000000000
+        end
+      end
+      inherited LayoutDuplicteID: TLayout
+        inherited RoundRect9: TRoundRect
+          inherited Text7: TText
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+      inherited LayoutINSERT: TLayout
+        inherited RoundRect10: TRoundRect
+          inherited Text4: TText
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+      inherited Layout1: TLayout
+        Size.Width = 384.000000000000000000
+        inherited Layout2: TLayout
+          Size.Width = 69.000000000000000000
+          inherited RoundRect1: TRoundRect
+            inherited Text1: TText
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+          end
+        end
+        inherited Layout4: TLayout
+          Size.Width = 224.000000000000000000
+        end
+      end
+      inherited Layout5: TLayout
+        Size.Width = 384.000000000000000000
+        inherited Layout8: TLayout
+          Size.Width = 69.000000000000000000
+          inherited RoundRect3: TRoundRect
+            inherited Text2: TText
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+          end
+        end
+        inherited Layout9: TLayout
+          Size.Width = 222.000000000000000000
+        end
+      end
+      inherited Layout10: TLayout
+        Size.Width = 384.000000000000000000
+        inherited Layout11: TLayout
+          Size.Width = 69.000000000000000000
+          inherited RoundRect7: TRoundRect
+            inherited Text3: TText
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+          end
+        end
+        inherited Layout12: TLayout
+          Size.Width = 224.000000000000000000
+        end
+      end
+      inherited Layout16: TLayout
+        Size.Width = 384.000000000000000000
+        inherited Layout17: TLayout
+          Size.Width = 69.000000000000000000
+          inherited RoundRect13: TRoundRect
+            inherited Text8: TText
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+            end
+          end
+        end
+        inherited Layout18: TLayout
+          Size.Width = 224.000000000000000000
+        end
+      end
+    end
+  end
+  inherited ToolBar6: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited Text14: TText
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+end
