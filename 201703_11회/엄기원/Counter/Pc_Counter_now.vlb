@@ -1,0 +1,16 @@
+﻿[pcnum]
+Coordinates=75,10,53,58
+
+[]
+Coordinates=188,1,91,36
+
+[C_Panel28]
+Coordinates=10,10,55,58
+Visible=True
+
+[Label_user_name28]
+Coordinates=10,78,78,58
+
+[Label_con28]
+Coordinates=138,10,53,58
+
